@@ -19,25 +19,29 @@ const ProofSection = () => {
 
         {/* All Proof Screenshots Gallery */}
         <div className="max-w-7xl mx-auto">
-          {/* Main dashboard with live badge */}
-          <div className="text-center mb-12">
-            <div className="relative inline-block">
-              <div className="absolute -top-3 -left-3 bg-gradient-to-r from-success to-green-400 text-success-foreground px-4 py-2 rounded-lg text-sm font-bold z-10 shadow-lg">
-                🔴 LIVE
+          {/* All proof cards in horizontal layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Dashboard Live */}
+            <div className="card-feature group">
+              <div className="text-center mb-4">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="bg-gradient-to-r from-success to-green-400 text-success-foreground px-3 py-1 rounded-lg text-sm font-bold">
+                    🔴 LIVE
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-gradient">💰 Dashboard Ao Vivo</h3>
+                <p className="text-sm text-muted-foreground">Resultados em tempo real</p>
               </div>
-              <div className="card-premium">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/200ec8d4-361e-4f1e-b3d8-cebcbc2fc4c1.png" 
                   alt="Dashboard ao vivo mostrando ganhos reais" 
-                  className="w-full max-w-lg h-auto object-cover rounded-xl"
+                  className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
-          </div>
 
-          {/* Proof screenshots grid - optimized for screenshot dimensions */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
-            {/* CPA Pendente - larger card for better screenshot display */}
+            {/* CPA Pendente */}
             <div className="card-feature group">
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
@@ -55,7 +59,7 @@ const ProofSection = () => {
               </div>
             </div>
 
-            {/* Revenue Share - larger card for better screenshot display */}
+            {/* Revenue Share */}
             <div className="card-feature group">
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold text-accent-gradient flex items-center justify-center gap-2">
@@ -72,15 +76,12 @@ const ProofSection = () => {
                 />
               </div>
             </div>
-          </div>
 
-          {/* Top Mobile Screenshots */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             {/* Dashboard Mobile */}
             <div className="card-feature group">
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
-                  📱 Dashboard
+                  📱 Dashboard Mobile
                 </h3>
                 <p className="text-lg font-semibold text-primary">R$ 2.287.467,88</p>
                 <p className="text-sm text-muted-foreground">Depósitos totais comprovados</p>
@@ -98,9 +99,9 @@ const ProofSection = () => {
             <div className="card-feature group">
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold text-warning flex items-center justify-center gap-2">
-                  🚀 Plataforma
+                  🚀 Plataforma Gaming
                 </h3>
-                <p className="text-lg font-semibold text-warning">Sistema Gaming</p>
+                <p className="text-lg font-semibold text-warning">Sistema Completo</p>
                 <p className="text-sm text-muted-foreground">Interface da plataforma</p>
               </div>
               <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
@@ -111,17 +112,14 @@ const ProofSection = () => {
                 />
               </div>
             </div>
-          </div>
 
-          {/* Financial Breakdown Cards */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
             {/* Painel de Comissões */}
             <div className="card-feature group">
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
                   💼 Painel de Comissões
                 </h3>
-                <p className="text-lg font-semibold text-primary">Saldo: R$ 56.998,62</p>
+                <p className="text-lg font-semibold text-primary">R$ 56.998,62</p>
                 <p className="text-sm text-muted-foreground">CPA R$ 50 + RevShare 25%</p>
               </div>
               <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
@@ -133,14 +131,14 @@ const ProofSection = () => {
               </div>
             </div>
 
-            {/* Breakdown Financeiro Detalhado */}
+            {/* Breakdown Financeiro */}
             <div className="card-feature group">
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold text-success flex items-center justify-center gap-2">
                   📋 Breakdown Financeiro
                 </h3>
-                <p className="text-lg font-semibold text-success">Receita Líquida: R$ 1.393,61</p>
-                <p className="text-sm text-muted-foreground">Análise detalhada completa</p>
+                <p className="text-lg font-semibold text-success">R$ 1.393,61</p>
+                <p className="text-sm text-muted-foreground">Receita líquida detalhada</p>
               </div>
               <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
