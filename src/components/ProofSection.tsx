@@ -141,6 +141,45 @@ const ProofSection = () => {
               </div>
             </div>
           </div>
+
+          {/* Financial Breakdown Cards */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+            {/* Painel de Comissões */}
+            <div className="card-feature group">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
+                  💼 Painel de Comissões
+                </h3>
+                <p className="text-lg font-semibold text-primary">Saldo: R$ 56.998,62</p>
+                <p className="text-sm text-muted-foreground">CPA R$ 50 + RevShare 25%</p>
+              </div>
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
+                <img 
+                  src="/lovable-uploads/05cbbc8f-a6ee-4014-8c71-d8371c41a9b7.png" 
+                  alt="Painel de Comissões - Saldo R$ 56.998,62" 
+                  className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Breakdown Financeiro Detalhado */}
+            <div className="card-feature group">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-success flex items-center justify-center gap-2">
+                  📋 Breakdown Financeiro
+                </h3>
+                <p className="text-lg font-semibold text-success">Receita Líquida: R$ 1.393,61</p>
+                <p className="text-sm text-muted-foreground">Análise detalhada completa</p>
+              </div>
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
+                <img 
+                  src="/lovable-uploads/f36d0b69-8523-43f0-9e38-15c76d79af92.png" 
+                  alt="Breakdown Financeiro - Receita Líquida R$ 1.393,61" 
+                  className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
           {/* Summary stats section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Revenue Share Card */}
