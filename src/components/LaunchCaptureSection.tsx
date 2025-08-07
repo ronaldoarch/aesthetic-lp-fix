@@ -34,7 +34,7 @@ const LaunchCaptureSection = () => {
                 <div className="p-4 bg-gradient-primary rounded-full mb-4 group-hover:scale-110 transition-transform">
                   <Target className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">🎯 Acesso Vitalício</h3>
+                <h3 className="font-bold text-lg mb-2">🎯 Acesso por um ano</h3>
                 <p className="text-muted-foreground text-sm">Método completo + atualizações para sempre</p>
               </div>
             </div>
