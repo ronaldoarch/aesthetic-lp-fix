@@ -4,7 +4,7 @@ import { Clock, Users, Target, Zap } from "lucide-react";
 
 const LaunchCaptureSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
+    <section id="signup-section" className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5" />
       

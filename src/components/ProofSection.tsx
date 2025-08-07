@@ -2,7 +2,7 @@ import { CheckCircle, DollarSign, TrendingUp } from "lucide-react";
 
 const ProofSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
+    <section id="proof-section" className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
