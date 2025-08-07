@@ -31,14 +31,19 @@ const HeroSection = () => {
                {/* VSL Space */}
                <div className="max-w-4xl mx-auto my-8">
                  <div className="relative aspect-video bg-gradient-to-br from-secondary/20 to-secondary/40 rounded-2xl border border-accent/20 overflow-hidden">
-                   <iframe
-                     src="https://www.youtube.com/embed/VfUB4NFgm6M"
-                     title="VSL Exclusiva - Método Afiliado Lucrativo"
-                     frameBorder="0"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                     allowFullScreen
-                     className="absolute inset-0 w-full h-full"
-                   ></iframe>
+                   <video
+                     controls
+                     poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png"
+                     className="w-full h-full object-cover"
+                   >
+                     <source src="/videos/vsl-video.mp4" type="video/mp4" />
+                     <p className="text-center p-8 text-muted-foreground">
+                       Seu navegador não suporta vídeo. 
+                       <a href="/videos/vsl-video.mp4" className="text-accent underline ml-1">
+                         Clique aqui para baixar o vídeo
+                       </a>
+                     </p>
+                   </video>
                  </div>
                </div>
                
