@@ -49,8 +49,8 @@ const HeroSection = () => {
                
                <p className="text-xl text-muted-foreground leading-relaxed">
                  🚨 VAGAS LIMITADAS: Apenas 100 pessoas terão acesso ao método que gera 
-                 <span className="text-accent font-bold"> R$ 246.488,52 por mês</span> em comissões RevShare.
-                 <span className="text-primary font-bold"> </span> 
+                 <span className="text-accent font-bold"> R$ 246.488,52 por mês</span> em comissões.
+                 <span className="text-primary font-bold"> CPA R$ 50 + RevShare 25%</span> 
                </p>
             </div>
 
