@@ -10,9 +10,9 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-20 pb-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Left column - Text content */}
-          <div className="space-y-8">
+        <div className="flex items-center justify-center min-h-[80vh]">
+          {/* Centered text content */}
+          <div className="space-y-8 text-center max-w-4xl">
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="bg-gradient-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
@@ -78,52 +78,6 @@ const HeroSection = () => {
                   <div className="text-xs text-success animate-pulse">PARA SEMPRE</div>
                 </div>
               </div>
-          </div>
-
-          {/* Right column - Hero image */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-glow">
-                <video 
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline
-                  className="w-full h-auto object-cover"
-                  poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png"
-                >
-                  <source src="/temp-video.mp4" type="video/mp4" />
-                  {/* Fallback image if video fails to load */}
-                  <img 
-                    src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
-                    alt="Dashboard mobile com resultados reais de afiliados - RevShare R$ 246K" 
-                    className="w-full h-auto object-cover"
-                  />
-                </video>
-               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-             </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full animate-float opacity-80 flex items-center justify-center">
-              <span className="text-2xl">💰</span>
-            </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-accent rounded-full animate-float opacity-60 flex items-center justify-center" style={{ animationDelay: '2s' }}>
-              <span className="text-xl">🚀</span>
-            </div>
-            
-            {/* Extra floating badges */}
-            <div className="absolute top-1/4 -left-8 bg-gradient-to-r from-success/90 to-success p-3 rounded-lg shadow-glow animate-float opacity-90" style={{ animationDelay: '1s' }}>
-              <div className="text-center">
-                <div className="text-lg font-bold text-success-foreground">💹 LIVE</div>
-                <div className="text-xs text-success-foreground/80">GANHOS</div>
-              </div>
-            </div>
-            
-            <div className="absolute bottom-1/3 -right-8 bg-gradient-to-r from-warning/90 to-warning p-3 rounded-lg shadow-accent animate-float opacity-90" style={{ animationDelay: '3s' }}>
-              <div className="text-center">
-                <div className="text-lg font-bold text-warning-foreground">🎯 +300%</div>
-                <div className="text-xs text-warning-foreground/80">ROI</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
