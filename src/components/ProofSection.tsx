@@ -35,43 +35,52 @@ const ProofSection = () => {
             </div>
           </div>
 
-          {/* Proof screenshots grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {/* CPA Pendente */}
+          {/* Proof screenshots grid - optimized for screenshot dimensions */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+            {/* CPA Pendente - larger card for better screenshot display */}
             <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-gradient">💰 CPA Pendente</h3>
-                <p className="text-sm text-muted-foreground">R$ 18.972,17</p>
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
+                  💰 CPA Pendente
+                </h3>
+                <p className="text-lg font-semibold text-success">R$ 18.972,17</p>
+                <p className="text-sm text-muted-foreground">Comissões aguardando pagamento</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/4091e940-7600-4883-bde6-b8c95665f313.png" 
                   alt="CPA Pendente R$ 18.972,17" 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
 
-            {/* Revenue Share */}
+            {/* Revenue Share - larger card for better screenshot display */}
             <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-accent-gradient">🎯 Revenue Share</h3>
-                <p className="text-sm text-muted-foreground">R$ 23.432,98</p>
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-accent-gradient flex items-center justify-center gap-2">
+                  🎯 Revenue Share
+                </h3>
+                <p className="text-lg font-semibold text-accent">R$ 23.432,98</p>
+                <p className="text-sm text-muted-foreground">Comissão recorrente paga</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/cf853c6b-5650-4541-99ae-64d6e34e5cec.png" 
                   alt="Revenue Share R$ 23.432,98" 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
+          </div>
 
+          {/* Additional proof screenshots - smaller grid */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
             {/* Dashboard Mobile */}
             <div className="card-feature group">
               <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-gradient">📱 Dashboard Mobile</h3>
-                <p className="text-sm text-muted-foreground">R$ 2.287.467,88</p>
+                <h3 className="text-lg font-bold text-gradient">📱 Dashboard</h3>
+                <p className="text-sm font-semibold text-primary">R$ 2.287.467,88</p>
               </div>
               <div className="relative overflow-hidden rounded-lg">
                 <img 
@@ -82,11 +91,11 @@ const ProofSection = () => {
               </div>
             </div>
 
-            {/* Dashboard Extra 1 */}
+            {/* Gaming Platform */}
             <div className="card-feature group">
               <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-warning">🚀 Gaming Platform</h3>
-                <p className="text-sm text-muted-foreground">Sistema Completo</p>
+                <h3 className="text-lg font-bold text-warning">🚀 Plataforma</h3>
+                <p className="text-sm text-muted-foreground">Sistema Gaming</p>
               </div>
               <div className="relative overflow-hidden rounded-lg">
                 <img 
@@ -97,32 +106,17 @@ const ProofSection = () => {
               </div>
             </div>
 
-            {/* Logo do sistema */}
+            {/* Sistema Logo */}
             <div className="card-feature group">
               <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-primary">🎯 Sistema</h3>
-                <p className="text-sm text-muted-foreground">Método Lucrativo</p>
+                <h3 className="text-lg font-bold text-primary">🎯 Método</h3>
+                <p className="text-sm text-muted-foreground">Sistema Completo</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-4 flex items-center justify-center">
+              <div className="relative overflow-hidden rounded-lg bg-background/20 p-6 flex items-center justify-center min-h-[200px]">
                 <img 
                   src="/lovable-uploads/f92f6d7a-33e2-40b8-9d69-0741dc7e20b5.png" 
                   alt="Método Afiliado Lucrativo" 
-                  className="w-full max-w-[200px] h-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-
-            {/* Comprovante adicional */}
-            <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-success">✅ Comprovante</h3>
-                <p className="text-sm text-muted-foreground">Resultados Reais</p>
-              </div>
-              <div className="relative overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/fcf6e3eb-897e-4077-a5a5-6d148cfbe5d6.png" 
-                  alt="Comprovante de resultados" 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full max-w-[180px] h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
