@@ -74,38 +74,43 @@ const ProofSection = () => {
             </div>
           </div>
 
-          {/* Additional proof screenshots - 4-column grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+          {/* Top Mobile Screenshots */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
             {/* Dashboard Mobile */}
             <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-gradient">📱 Dashboard</h3>
-                <p className="text-sm font-semibold text-primary">R$ 2.287.467,88</p>
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
+                  📱 Dashboard
+                </h3>
+                <p className="text-lg font-semibold text-primary">R$ 2.287.467,88</p>
+                <p className="text-sm text-muted-foreground">Depósitos totais comprovados</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/b9132aa8-839b-45e0-ae89-e75f99443b23.png" 
                   alt="Dashboard Mobile - Depósitos R$ 2.287.467,88" 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
 
             {/* Gaming Platform */}
             <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-warning">🚀 Plataforma</h3>
-                <p className="text-sm text-muted-foreground">Sistema Gaming</p>
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-warning flex items-center justify-center gap-2">
+                  🚀 Plataforma
+                </h3>
+                <p className="text-lg font-semibold text-warning">Sistema Gaming</p>
+                <p className="text-sm text-muted-foreground">Interface da plataforma</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
                   alt="Gaming Platform Dashboard" 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
-
           </div>
 
           {/* Financial Breakdown Cards */}
