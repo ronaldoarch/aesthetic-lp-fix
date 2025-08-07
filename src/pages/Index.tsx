@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import ResultsSection from "@/components/ResultsSection";
+import ProofSection from "@/components/ProofSection";
 import LaunchCaptureSection from "@/components/LaunchCaptureSection";
 import VipGroupSection from "@/components/VipGroupSection";
 import FloatingStats from "@/components/FloatingStats";
@@ -12,6 +13,7 @@ const Index = () => {
       <HeroSection />
       <ProblemSection />
       <ResultsSection />
+      <ProofSection />
       <LaunchCaptureSection />
       <VipGroupSection />
       

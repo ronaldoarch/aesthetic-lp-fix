@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Gift, Users, BookOpen, Zap, MessageCircle, TrendingUp } from "lucide-react";
-import mentorPortrait from "@/assets/mentor-portrait.jpg";
+import relatoriGanhos from "/lovable-uploads/200ec8d4-361e-4f1e-b3d8-cebcbc2fc4c1.png";
 
 const VipGroupSection = () => {
   const benefits = [
@@ -97,11 +97,11 @@ const VipGroupSection = () => {
           {/* Mentor Image */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-glow">
-              <img 
-                src={mentorPortrait} 
-                alt="Mentor especialista em marketing de afiliados" 
-                className="w-full h-auto object-cover"
-              />
+               <img 
+                 src={relatoriGanhos} 
+                 alt="Relatório detalhado de ganhos - Receita líquida R$ 1.393,61" 
+                 className="w-full h-auto object-cover"
+               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
 

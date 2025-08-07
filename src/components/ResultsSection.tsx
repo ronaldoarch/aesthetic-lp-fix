@@ -1,5 +1,5 @@
 import { TrendingUp, Users, DollarSign, Target } from "lucide-react";
-import resultsDashboard from "@/assets/results-dashboard.jpg";
+import dashboardPainel from "/lovable-uploads/fcf6e3eb-897e-4077-a5a5-6d148cfbe5d6.png";
 
 const ResultsSection = () => {
   const results = [
@@ -47,11 +47,11 @@ const ResultsSection = () => {
           {/* Dashboard Image */}
           <div className="relative order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-xl shadow-card">
-              <img 
-                src={resultsDashboard} 
-                alt="Dashboard com resultados reais de conversões" 
-                className="w-full h-auto object-cover"
-              />
+               <img 
+                 src={dashboardPainel} 
+                 alt="Dashboard completo com resultados reais - CPA R$ 56K e RevShare R$ 246K" 
+                 className="w-full h-auto object-cover"
+               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
             </div>
             

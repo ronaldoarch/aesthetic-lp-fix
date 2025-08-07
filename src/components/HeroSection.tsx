@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-import tradingHero from "@/assets/trading-hero.jpg";
+import dashboardMobile from "/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png";
 
 const HeroSection = () => {
   return (
@@ -68,11 +68,11 @@ const HeroSection = () => {
           {/* Right column - Hero image */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-glow">
-              <img 
-                src={tradingHero} 
-                alt="Workspace de trading profissional" 
-                className="w-full h-auto object-cover"
-              />
+               <img 
+                 src={dashboardMobile} 
+                 alt="Dashboard mobile com resultados reais de afiliados - RevShare R$ 246K" 
+                 className="w-full h-auto object-cover"
+               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
             
