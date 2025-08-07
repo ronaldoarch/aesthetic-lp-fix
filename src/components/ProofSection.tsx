@@ -74,8 +74,8 @@ const ProofSection = () => {
             </div>
           </div>
 
-          {/* Additional proof screenshots - smaller grid */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+          {/* Additional proof screenshots - 4-column grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
             {/* Dashboard Mobile */}
             <div className="card-feature group">
               <div className="text-center mb-3">
@@ -101,6 +101,26 @@ const ProofSection = () => {
                 <img 
                   src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
                   alt="Gaming Platform Dashboard" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Novo Dashboard com LIVE badge */}
+            <div className="card-feature group">
+              <div className="text-center mb-3">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="bg-gradient-to-r from-success to-green-400 text-success-foreground px-2 py-1 rounded text-xs font-bold">
+                    🔴 LIVE
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-success">💰 Dashboard</h3>
+                <p className="text-sm text-muted-foreground">Receita Líquida</p>
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/705eb186-88fa-4ce1-9d85-f2fa7f316294.png" 
+                  alt="Dashboard Live com receita líquida" 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
