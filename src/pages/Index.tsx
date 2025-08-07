@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
-import ResultsSection from "@/components/ResultsSection";
+
 import ProofSection from "@/components/ProofSection";
 import LaunchCaptureSection from "@/components/LaunchCaptureSection";
 import VipGroupSection from "@/components/VipGroupSection";
@@ -10,7 +10,7 @@ const Index = () => {
     <main className="min-h-screen bg-background relative overflow-hidden">
       <HeroSection />
       <ProblemSection />
-      <ResultsSection />
+      
       <ProofSection />
       <LaunchCaptureSection />
       <VipGroupSection />
