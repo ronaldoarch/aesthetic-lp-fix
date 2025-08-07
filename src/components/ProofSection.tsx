@@ -19,44 +19,23 @@ const ProofSection = () => {
 
         {/* All Proof Screenshots Gallery */}
         <div className="max-w-7xl mx-auto">
-          {/* Top row - 1 card centralizado */}
-          <div className="flex justify-center mb-12">
+          {/* Top row - Dashboard Ao Vivo e Plataforma Gaming */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
             {/* Dashboard Live */}
-            <div className="card-feature group max-w-md">
-              <div className="text-center mb-3">
+            <div className="card-feature group">
+              <div className="text-center mb-4">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <div className="bg-gradient-to-r from-success to-green-400 text-success-foreground px-2 py-1 rounded-md text-xs font-bold">
                     🔴 LIVE
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-gradient">💰 Dashboard Ao Vivo</h3>
-                <p className="text-xs text-muted-foreground">Resultados em tempo real</p>
-              </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
-                <img 
-                  src="/lovable-uploads/200ec8d4-361e-4f1e-b3d8-cebcbc2fc4c1.png" 
-                  alt="Dashboard ao vivo mostrando ganhos reais" 
-                  className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Middle row - 2 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-            {/* Dashboard Mobile */}
-            <div className="card-feature group">
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
-                  📱 Dashboard Mobile
-                </h3>
-                <p className="text-lg font-semibold text-primary">R$ 2.287.467,88</p>
-                <p className="text-sm text-muted-foreground">Depósitos totais</p>
+                <h3 className="text-xl font-bold text-gradient">💰 Dashboard Ao Vivo</h3>
+                <p className="text-sm text-muted-foreground">Resultados em tempo real</p>
               </div>
               <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
-                  src="/lovable-uploads/b9132aa8-839b-45e0-ae89-e75f99443b23.png" 
-                  alt="Dashboard Mobile - Depósitos R$ 2.287.467,88" 
+                  src="/lovable-uploads/200ec8d4-361e-4f1e-b3d8-cebcbc2fc4c1.png" 
+                  alt="Dashboard ao vivo mostrando ganhos reais" 
                   className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -75,6 +54,26 @@ const ProofSection = () => {
                 <img 
                   src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
                   alt="Gaming Platform Dashboard" 
+                  className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Middle row - Dashboard Mobile centralizado */}
+          <div className="flex justify-center mb-12">
+            <div className="card-feature group max-w-md">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
+                  📱 Dashboard Mobile
+                </h3>
+                <p className="text-lg font-semibold text-primary">R$ 2.287.467,88</p>
+                <p className="text-sm text-muted-foreground">Depósitos totais</p>
+              </div>
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
+                <img 
+                  src="/lovable-uploads/b9132aa8-839b-45e0-ae89-e75f99443b23.png" 
+                  alt="Dashboard Mobile - Depósitos R$ 2.287.467,88" 
                   className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
