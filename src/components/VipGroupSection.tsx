@@ -84,8 +84,11 @@ const VipGroupSection = () => {
                   </p>
                 </div>
                 
-                <Button size="lg" className="btn-hero w-full">
-                 QUERO FATURAR R$ 300K/MÊS
+                <Button size="lg" className="btn-hero w-full relative overflow-hidden group">
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    🔥 QUERO FATURAR R$ 300K/MÊS 💰
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/30 to-yellow-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
               </div>
             </div>
@@ -150,9 +153,12 @@ const VipGroupSection = () => {
                </div>
             </div>
 
-             <Button size="lg" className="btn-hero text-lg px-8">
-               SIM! QUERO SER MILIONÁRIO
-            </Button>
+             <Button size="lg" className="btn-hero text-lg px-8 relative overflow-hidden group">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  💎 SIM! QUERO SER MILIONÁRIO 🚀
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/30 to-yellow-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+             </Button>
           </div>
         </div>
       </div>
