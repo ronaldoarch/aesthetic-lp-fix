@@ -91,7 +91,7 @@ const HeroSection = () => {
                   className="w-full h-auto object-cover"
                   poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png"
                 >
-                  <source src="/lovable-uploads/e1cb065e-3870-433b-b97e-771561137bd7.mp4" type="video/mp4" />
+                  <source src="/temp-video.mp4" type="video/mp4" />
                   {/* Fallback image if video fails to load */}
                   <img 
                     src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
