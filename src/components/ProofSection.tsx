@@ -19,10 +19,10 @@ const ProofSection = () => {
 
         {/* All Proof Screenshots Gallery */}
         <div className="max-w-7xl mx-auto">
-          {/* All proof cards in horizontal layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {/* Top row - 3 smaller cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Dashboard Live */}
-            <div className="card-feature group h-fit">
+            <div className="card-feature group">
               <div className="text-center mb-3">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <div className="bg-gradient-to-r from-success to-green-400 text-success-foreground px-2 py-1 rounded-md text-xs font-bold">
@@ -42,13 +42,13 @@ const ProofSection = () => {
             </div>
 
             {/* CPA Pendente */}
-            <div className="card-feature group h-fit">
+            <div className="card-feature group">
               <div className="text-center mb-3">
                 <h3 className="text-lg font-bold text-gradient flex items-center justify-center gap-2">
                   💰 CPA Pendente
                 </h3>
                 <p className="text-sm font-semibold text-success">R$ 18.972,17</p>
-                <p className="text-xs text-muted-foreground">Comissões aguardando pagamento</p>
+                <p className="text-xs text-muted-foreground">Comissões aguardando</p>
               </div>
               <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
                 <img 
@@ -60,13 +60,13 @@ const ProofSection = () => {
             </div>
 
             {/* Revenue Share */}
-            <div className="card-feature group h-fit">
+            <div className="card-feature group">
               <div className="text-center mb-3">
                 <h3 className="text-lg font-bold text-accent-gradient flex items-center justify-center gap-2">
                   🎯 Revenue Share
                 </h3>
                 <p className="text-sm font-semibold text-accent">R$ 23.432,98</p>
-                <p className="text-xs text-muted-foreground">Comissão recorrente paga</p>
+                <p className="text-xs text-muted-foreground">Comissão recorrente</p>
               </div>
               <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
                 <img 
@@ -76,75 +76,80 @@ const ProofSection = () => {
                 />
               </div>
             </div>
+          </div>
 
+          {/* Middle row - 3 larger cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Dashboard Mobile */}
-            <div className="card-feature group h-fit">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-gradient flex items-center justify-center gap-2">
+            <div className="card-feature group">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
                   📱 Dashboard Mobile
                 </h3>
-                <p className="text-sm font-semibold text-primary">R$ 2.287.467,88</p>
-                <p className="text-xs text-muted-foreground">Depósitos totais comprovados</p>
+                <p className="text-lg font-semibold text-primary">R$ 2.287.467,88</p>
+                <p className="text-sm text-muted-foreground">Depósitos totais</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/b9132aa8-839b-45e0-ae89-e75f99443b23.png" 
                   alt="Dashboard Mobile - Depósitos R$ 2.287.467,88" 
-                  className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
 
             {/* Gaming Platform */}
-            <div className="card-feature group h-fit">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-warning flex items-center justify-center gap-2">
+            <div className="card-feature group">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-warning flex items-center justify-center gap-2">
                   🚀 Plataforma Gaming
                 </h3>
-                <p className="text-sm font-semibold text-warning">Sistema Completo</p>
-                <p className="text-xs text-muted-foreground">Interface da plataforma</p>
+                <p className="text-lg font-semibold text-warning">Sistema Completo</p>
+                <p className="text-sm text-muted-foreground">Interface completa</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
                   alt="Gaming Platform Dashboard" 
-                  className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
 
             {/* Painel de Comissões */}
-            <div className="card-feature group h-fit">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-gradient flex items-center justify-center gap-2">
+            <div className="card-feature group">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
                   💼 Painel de Comissões
                 </h3>
-                <p className="text-sm font-semibold text-primary">R$ 56.998,62</p>
-                <p className="text-xs text-muted-foreground">CPA R$ 50 + RevShare 25%</p>
+                <p className="text-lg font-semibold text-primary">R$ 56.998,62</p>
+                <p className="text-sm text-muted-foreground">Saldo atual</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/05cbbc8f-a6ee-4014-8c71-d8371c41a9b7.png" 
                   alt="Painel de Comissões - Saldo R$ 56.998,62" 
-                  className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
+          </div>
 
-            {/* Breakdown Financeiro */}
-            <div className="card-feature group h-fit">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-success flex items-center justify-center gap-2">
+          {/* Bottom row - 1 standalone card */}
+          <div className="flex justify-center mb-16">
+            <div className="card-feature group max-w-md">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-success flex items-center justify-center gap-2">
                   📋 Breakdown Financeiro
                 </h3>
-                <p className="text-sm font-semibold text-success">R$ 1.393,61</p>
-                <p className="text-xs text-muted-foreground">Receita líquida detalhada</p>
+                <p className="text-lg font-semibold text-success">R$ 1.393,61</p>
+                <p className="text-sm text-muted-foreground">Receita líquida detalhada</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
+              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
                 <img 
                   src="/lovable-uploads/f36d0b69-8523-43f0-9e38-15c76d79af92.png" 
                   alt="Breakdown Financeiro - Receita Líquida R$ 1.393,61" 
-                  className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
