@@ -106,40 +106,6 @@ const ProofSection = () => {
               </div>
             </div>
 
-            {/* Dashboard Live - imagem direta */}
-            <div className="card-feature group">
-              <div className="text-center mb-3">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <div className="bg-gradient-to-r from-success to-green-400 text-success-foreground px-3 py-1 rounded-lg text-sm font-bold">
-                    🔴 LIVE
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-success">💰 Receita Líquida</h3>
-                <p className="text-sm font-semibold text-success">R$ 1.393,61</p>
-              </div>
-              <div className="relative overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/705eb186-88fa-4ce1-9d85-f2fa7f316294.png" 
-                  alt="Dashboard Live - Receita Líquida R$ 1.393,61" 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-
-            {/* Print de Resultado */}
-            <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-success">📊 Resultados</h3>
-                <p className="text-sm text-muted-foreground">Dashboard Financeiro</p>
-              </div>
-              <div className="relative overflow-hidden rounded-lg">
-                <img 
-                  src="/lovable-uploads/afbc6555-af34-4a17-b541-a89c56780bdd.png" 
-                  alt="Dashboard com resultados financeiros reais" 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
           </div>
 
           {/* Financial Breakdown Cards */}
