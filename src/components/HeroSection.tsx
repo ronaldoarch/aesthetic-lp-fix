@@ -83,13 +83,24 @@ const HeroSection = () => {
           {/* Right column - Hero image */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-glow">
-               <img 
-                 src={dashboardMobile} 
-                 alt="Dashboard mobile com resultados reais de afiliados - RevShare R$ 246K" 
-                 className="w-full h-auto object-cover"
-               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-            </div>
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                  className="w-full h-auto object-cover"
+                  poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png"
+                >
+                  <source src="/lovable-uploads/e1cb065e-3870-433b-b97e-771561137bd7.mp4" type="video/mp4" />
+                  {/* Fallback image if video fails to load */}
+                  <img 
+                    src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
+                    alt="Dashboard mobile com resultados reais de afiliados - RevShare R$ 246K" 
+                    className="w-full h-auto object-cover"
+                  />
+                </video>
+               <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+             </div>
             
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full animate-float opacity-80 flex items-center justify-center">
