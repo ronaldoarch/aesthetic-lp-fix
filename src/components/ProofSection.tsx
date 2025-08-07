@@ -137,20 +137,63 @@ const ProofSection = () => {
 
           {/* Bottom row - 1 standalone card */}
           <div className="flex justify-center mb-16">
-            <div className="card-feature group max-w-md">
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-success flex items-center justify-center gap-2">
-                  📋 Breakdown Financeiro
+            <div className="card-feature group max-w-4xl w-full">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-gradient flex items-center justify-center gap-2">
+                  🏆 Sistema Completo de Comissões
                 </h3>
-                <p className="text-lg font-semibold text-success">R$ 1.393,61</p>
-                <p className="text-sm text-muted-foreground">Receita líquida detalhada</p>
+                <p className="text-lg font-semibold text-primary mt-2">CPA + RevShare + Painel de Controle</p>
+                <p className="text-sm text-muted-foreground">Visão completa do sistema de afiliados</p>
               </div>
-              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
-                <img 
-                  src="/lovable-uploads/f36d0b69-8523-43f0-9e38-15c76d79af92.png" 
-                  alt="Breakdown Financeiro - Receita Líquida R$ 1.393,61" 
-                  className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
-                />
+              
+              {/* Grid das 3 imagens */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* CPA Pendente */}
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-success mb-3">💰 CPA Pendente</h4>
+                  <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
+                    <img 
+                      src="/lovable-uploads/32603b26-0596-496f-9cc6-5147b3874fa0.png" 
+                      alt="CPA Pendente R$ 18.972,17" 
+                      className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold text-success mt-2">R$ 18.972,17</p>
+                </div>
+
+                {/* Revenue Share */}
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-accent mb-3">🎯 Revenue Share</h4>
+                  <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
+                    <img 
+                      src="/lovable-uploads/ee276ba4-6de6-4f4d-8697-77b90e6db4d2.png" 
+                      alt="Revenue Share R$ 23.432,98" 
+                      className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold text-accent mt-2">R$ 23.432,98</p>
+                </div>
+
+                {/* Painel Completo */}
+                <div className="text-center">
+                  <h4 className="text-lg font-semibold text-primary mb-3">📊 Painel de Controle</h4>
+                  <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
+                    <img 
+                      src="/lovable-uploads/24ff665f-80f4-4a71-ba36-b2b7b113e4ad.png" 
+                      alt="Painel de Controle - CPA + RevShare" 
+                      className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <p className="text-sm font-semibold text-primary mt-2">Saldo: R$ 56.998,62</p>
+                </div>
+              </div>
+
+              {/* Resumo do sistema */}
+              <div className="mt-6 p-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl border border-primary/20">
+                <div className="text-center">
+                  <p className="text-lg font-bold text-gradient">💎 Sistema Premium de Afiliados</p>
+                  <p className="text-sm text-muted-foreground mt-1">CPA R$ 50 + RevShare 25% + Painel Completo de Controle</p>
+                </div>
               </div>
             </div>
           </div>
