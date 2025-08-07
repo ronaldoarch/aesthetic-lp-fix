@@ -20,23 +20,23 @@ const HeroSection = () => {
                 </span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Aprenda a trazer{" "}
-                <span className="text-gradient">jogadores</span>{" "}
-                que entram, jogam e{" "}
-                <span className="text-accent-gradient">depositam</span>{" "}
-                no mesmo dia
-              </h1>
-              
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Descubra o sistema que transforma visitantes em jogadores ativos 
-                e lucrativos usando estratégias avançadas de marketing de afiliados.
-              </p>
+               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+                Domine o{" "}
+                <span className="text-gradient">REVERSHARE</span>{" "}
+                e transforme jogadores em{" "}
+                <span className="text-accent-gradient">MÁQUINAS DE DINHEIRO</span>{" "}
+                24/7
+               </h1>
+               
+               <p className="text-xl text-muted-foreground leading-relaxed">
+                 O sistema BRUTAL que converte leads frios em HIGH-ROLLERS viciados.
+                 CPA + Lifetime Value = Receita PASSIVA infinita. Zero concorrência.
+               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="btn-hero text-lg">
-                Quero Acesso Gratuito
+                 QUERO FATURAR R$ 50K/MÊS
               </Button>
               <Button variant="outline" size="lg" className="group">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -44,20 +44,20 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            <div className="flex items-center gap-8 pt-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gradient">95%</div>
-                <div className="text-sm text-muted-foreground">Taxa de Conversão</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-accent-gradient">24h</div>
-                <div className="text-sm text-muted-foreground">Primeiro Depósito</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-success">+500%</div>
-                <div className="text-sm text-muted-foreground">ROI Médio</div>
-              </div>
-            </div>
+             <div className="flex items-center gap-8 pt-4">
+               <div className="text-center">
+                 <div className="text-3xl font-bold text-gradient">R$ 287K</div>
+                 <div className="text-sm text-muted-foreground">Última Comissão</div>
+               </div>
+               <div className="text-center">
+                 <div className="text-3xl font-bold text-accent-gradient">35%</div>
+                 <div className="text-sm text-muted-foreground">RevShare</div>
+               </div>
+               <div className="text-center">
+                 <div className="text-3xl font-bold text-success">∞</div>
+                 <div className="text-sm text-muted-foreground">Lifetime Value</div>
+               </div>
+             </div>
           </div>
 
           {/* Right column - Hero image */}

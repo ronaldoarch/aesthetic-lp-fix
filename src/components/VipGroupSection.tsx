@@ -6,28 +6,28 @@ const VipGroupSection = () => {
   const benefits = [
     {
       icon: BookOpen,
-      title: "Acesso ao método completo",
-      description: "Passo a passo detalhado para atrair e converter jogadores"
+      title: "Programa de RevShare SECRETO",
+      description: "Acesso EXCLUSIVO ao programa que paga 40% vitalício + bônus"
     },
     {
       icon: Users,
-      title: "Networking com afiliados de elite",
-      description: "Conecte-se com os melhores profissionais do mercado"
+      title: "Network de afiliados MILIONÁRIOS",
+      description: "Conecte-se com quem fatura R$ 500K+ por mês (apenas convidados)"
     },
     {
       icon: MessageCircle,
-      title: "Suporte direto via WhatsApp",
-      description: "Tire suas dúvidas diretamente com especialistas"
+      title: "Suporte VIP no WhatsApp",
+      description: "Acesso direto aos TOP AFILIADOS que faturam 7 dígitos"
     },
     {
       icon: TrendingUp,
-      title: "Estratégias de tráfego exclusivas",
-      description: "Técnicas avançadas não reveladas publicamente"
+      title: "Fórmula do TRÁFEGO MILIONÁRIO",
+      description: "Como gastar R$ 10K e gerar R$ 100K+ com tráfego pago"
     },
     {
       icon: Zap,
-      title: "Templates e scripts prontos",
-      description: "Material pronto para usar e acelerar resultados"
+      title: "Scripts que HIPNOTIZAM jogadores",
+      description: "Copy testada que fez jogador depositar R$ 50K em 24h"
     }
   ];
 
@@ -41,13 +41,13 @@ const VipGroupSection = () => {
           </div>
           
           <h2 className="text-4xl font-bold mb-4">
-            O Que Você Vai Ter{" "}
-            <span className="text-gradient">De Graça</span>
+            SEGREDOS Que Fazem Afiliados{" "}
+            <span className="text-gradient">Faturarem R$ 1 MILHÃO+</span>
             <br />
-            No <span className="text-accent-gradient">Grupo VIP</span>
+            Revelados No <span className="text-accent-gradient">GRUPO SECRETO</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Acesso completo ao sistema que já transformou centenas de afiliados
+            Apenas 50 pessoas terão acesso aos métodos que geram R$ 300K+ por mês
           </p>
         </div>
 
@@ -77,15 +77,15 @@ const VipGroupSection = () => {
               <div className="card-premium bg-gradient-to-r from-success/10 to-accent/10 border-success/20 text-center">
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-success mb-1">
-                    100% Gratuito
+                    GRÁTIS Por 24h
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Sem pegadinhas, sem custos ocultos
+                    Depois R$ 5.000 para entrar
                   </p>
                 </div>
                 
                 <Button size="lg" className="btn-hero w-full">
-                  Quero Entrar no Grupo VIP Agora
+                 QUERO FATURAR R$ 300K/MÊS
                 </Button>
               </div>
             </div>
@@ -108,21 +108,21 @@ const VipGroupSection = () => {
                 <div className="flex text-accent text-sm mb-1">
                   ★★★★★
                 </div>
-                <p className="text-sm text-foreground">
-                  "Em 30 dias consegui triplicar meus resultados usando o método."
-                </p>
+                 <p className="text-sm text-foreground">
+                   "RevShare me trouxe R$ 847K em 6 meses. Método INSANO!"
+                 </p>
               </div>
-              <div className="text-xs text-muted-foreground">
-                - Carlos M., Afiliado
-              </div>
+               <div className="text-xs text-muted-foreground">
+                 - Bruno L., Afiliado Milionário
+               </div>
             </div>
 
             {/* Floating stats */}
             <div className="absolute -top-6 -right-6 bg-gradient-accent p-4 rounded-xl shadow-accent">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent-foreground">24h</div>
-                <div className="text-xs text-accent-foreground/80">Para Ver Resultados</div>
-              </div>
+               <div className="text-center">
+                 <div className="text-2xl font-bold text-accent-foreground">R$ 1M+</div>
+                 <div className="text-xs text-accent-foreground/80">Faturamento Mês</div>
+               </div>
             </div>
           </div>
         </div>
@@ -131,27 +131,27 @@ const VipGroupSection = () => {
         <div className="text-center mt-16">
           <div className="inline-block card-premium bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20 p-8 max-w-2xl">
             <h3 className="text-2xl font-bold text-gradient mb-4">
-              Última Chance de Garantir Sua Vaga
+              ÚLTIMAS 12 VAGAS Para Milionários
             </h3>
             <p className="text-muted-foreground mb-6">
-              Apenas os primeiros 100 cadastros terão acesso ao conteúdo completo. 
-              Não perca esta oportunidade única.
+              Depois disso, só entrará quem pagar R$ 50.000. 
+              Esta é sua ÚNICA chance de entrar DE GRAÇA.
             </p>
             
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="text-center">
-                <div className="text-xl font-bold text-accent">47</div>
+                <div className="text-xl font-bold text-destructive">12</div>
                 <div className="text-xs text-muted-foreground">Vagas Restantes</div>
               </div>
               <div className="w-px h-8 bg-border"></div>
               <div className="text-center">
-                <div className="text-xl font-bold text-destructive">23:45:12</div>
-                <div className="text-xs text-muted-foreground">Tempo Restante</div>
-              </div>
+                <div className="text-xl font-bold text-destructive">05:47:23</div>
+                <div className="text-xs text-muted-foreground">Para Fechar Para Sempre</div>
+               </div>
             </div>
 
-            <Button size="lg" className="btn-hero text-lg px-8">
-              Garantir Minha Vaga Gratuita
+             <Button size="lg" className="btn-hero text-lg px-8">
+               SIM! QUERO SER MILIONÁRIO
             </Button>
           </div>
         </div>

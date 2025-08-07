@@ -2,20 +2,23 @@ import { X, CheckCircle } from "lucide-react";
 
 const ProblemSection = () => {
   const currentProblems = [
-    "Dificuldade em gerar engajamento efetivo",
-    "Dependência de sorte em vez de estratégia",
-    "Falta de um sistema claro de conversão",
-    "Baixa retenção de jogadores",
-    "Resultados inconsistentes"
+    "Dependendo de CPA mixuruca de R$ 50-200",
+    "Perdendo dinheiro com tráfego que não converte",
+    "Sem estratégia de RevShare para receita recorrente",
+    "Jogadores depositem 1x e somem",
+    "Competindo com milhares de afiliados amadores",
+    "Zero conhecimento sobre lifetime value"
   ];
 
   const solutionBenefits = [
-    "Sistema comprovado de atração de jogadores",
-    "Método baseado em dados e resultados reais",
-    "Estratégias de engajamento que convertem",
-    "Técnicas de retenção a longo prazo",
-    "Resultados previsíveis e escaláveis",
-    "Suporte completo para implementação"
+    "Método EXCLUSIVO para capturar HIGH-ROLLERS",
+    "Sistema de RevShare que paga R$ 10K+ por mês POR JOGADOR",
+    "Funil que transforma leads em jogadores VICIADOS",
+    "Estratégias de retenção que fazem jogador depositar toda semana",
+    "Tráfego ultra-segmentado que converte 15x mais",
+    "Acesso aos MELHORES programas de afiliação (não divulgados)",
+    "Templates de copy que hipnotizam jogadores",
+    "Método para duplicar seu faturamento em 30 dias"
   ];
 
   return (
@@ -23,10 +26,14 @@ const ProblemSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            O Seu Problema <span className="text-gradient">Hoje É Este</span>
+            Enquanto Você Luta Por{" "}
+            <span className="text-destructive">Migalhas De CPA</span>,
+            <br />
+            Outros Faturam{" "}
+            <span className="text-gradient">R$ 300K+ Por Mês</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A maioria dos afiliados comete os mesmos erros que limitam seus resultados
+            95% dos afiliados estão presos no método AMADOR. Só os 5% conhecem os SEGREDOS.
           </p>
         </div>
 
@@ -35,10 +42,10 @@ const ProblemSection = () => {
           <div className="card-premium">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-destructive mb-2">
-                Como Você Trabalha Agora
+                Método AMADOR (Que Te Mantém Quebrado)
               </h3>
               <p className="text-muted-foreground">
-                Métodos ultrapassados que não geram resultados consistentes
+                Enquanto você briga por CPA de R$ 100, outros recebem R$ 50K+ todo mês
               </p>
             </div>
 
@@ -56,10 +63,10 @@ const ProblemSection = () => {
           <div className="card-premium border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-gradient mb-2">
-                O Que Acontece Com o Método Afiliado Lucrativo 2.0
+                Método MILIONÁRIO (RevShare + LTV Infinito)
               </h3>
               <p className="text-muted-foreground">
-                Sistema revolucionário que garante resultados previsíveis
+                O sistema que faz 1 jogador render R$ 200K+ em lifetime value
               </p>
             </div>
 
@@ -75,10 +82,10 @@ const ProblemSection = () => {
             <div className="mt-6 pt-4 border-t border-border">
               <div className="text-center">
                 <div className="text-2xl font-bold text-accent-gradient mb-1">
-                  Transformação Garantida
+                  Faturamento INFINITO
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Resultados visíveis em 24 horas
+                  RevShare = Renda passiva vitalícia
                 </p>
               </div>
             </div>
