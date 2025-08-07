@@ -42,8 +42,8 @@ const ProofSection = () => {
             </div>
           </div>
 
-          {/* Middle row - 3 larger cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {/* Middle row - 2 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
             {/* Dashboard Mobile */}
             <div className="card-feature group">
               <div className="text-center mb-4">
@@ -75,24 +75,6 @@ const ProofSection = () => {
                 <img 
                   src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
                   alt="Gaming Platform Dashboard" 
-                  className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-
-            {/* Painel de Comissões */}
-            <div className="card-feature group">
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
-                  💼 Painel de Comissões
-                </h3>
-                <p className="text-lg font-semibold text-primary">R$ 56.998,62</p>
-                <p className="text-sm text-muted-foreground">Saldo atual</p>
-              </div>
-              <div className="relative overflow-hidden rounded-xl bg-background/50 p-2">
-                <img 
-                  src="/lovable-uploads/05cbbc8f-a6ee-4014-8c71-d8371c41a9b7.png" 
-                  alt="Painel de Comissões - Saldo R$ 56.998,62" 
                   className="w-full h-auto object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
