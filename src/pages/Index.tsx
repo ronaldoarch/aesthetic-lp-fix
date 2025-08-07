@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import ResultsSection from "@/components/ResultsSection";
+import LaunchCaptureSection from "@/components/LaunchCaptureSection";
 import VipGroupSection from "@/components/VipGroupSection";
 import FloatingStats from "@/components/FloatingStats";
 import AnimatedBadges from "@/components/AnimatedBadges";
@@ -11,6 +12,7 @@ const Index = () => {
       <HeroSection />
       <ProblemSection />
       <ResultsSection />
+      <LaunchCaptureSection />
       <VipGroupSection />
       
       {/* Visual stimulation elements */}

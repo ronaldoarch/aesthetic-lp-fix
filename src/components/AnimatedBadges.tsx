@@ -2,11 +2,11 @@ import { Badge } from "@/components/ui/badge";
 
 const AnimatedBadges = () => {
   const badges = [
-    { text: "🔥 MÉTODO SECRETO", color: "destructive" },
-    { text: "💰 REVSHARE 35%", color: "success" },
-    { text: "⚡ LIFETIME VALUE", color: "warning" },
-    { text: "🚀 CPA + REVSHARE", color: "primary" },
-    { text: "💎 HIGH-ROLLERS", color: "accent" },
+    { text: "🎯 MÉTODO LUCRATIVO", color: "destructive" },
+    { text: "💰 REVSHARE 25%", color: "success" },
+    { text: "⚡ CPA R$ 50", color: "warning" },
+    { text: "🚀 LANÇAMENTO 48H", color: "primary" },
+    { text: "🔥 VAGAS LIMITADAS", color: "accent" },
   ];
 
   return (

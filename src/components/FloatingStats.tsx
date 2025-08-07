@@ -2,10 +2,10 @@ import { TrendingUp, DollarSign, Users, Zap } from "lucide-react";
 
 const FloatingStats = () => {
   const stats = [
-    { icon: DollarSign, value: "R$ 2.8M", label: "FATURADO", emoji: "💰" },
-    { icon: Users, value: "+15.847", label: "AFILIADOS", emoji: "👥" },
-    { icon: TrendingUp, value: "+420%", label: "CONVERSÃO", emoji: "📈" },
-    { icon: Zap, value: "35%", label: "REVSHARE", emoji: "⚡" },
+    { icon: DollarSign, value: "R$ 246K", label: "REVSHARE", emoji: "💰" },
+    { icon: Users, value: "1.867", label: "PLAYERS", emoji: "🎯" },
+    { icon: TrendingUp, value: "R$ 50", label: "CPA", emoji: "📈" },
+    { icon: Zap, value: "25%", label: "COMISSÃO", emoji: "⚡" },
   ];
 
   return (

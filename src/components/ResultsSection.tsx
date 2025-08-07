@@ -5,27 +5,27 @@ const ResultsSection = () => {
   const results = [
     {
       icon: DollarSign,
-      value: "R$ 1.500.000",
-      label: "em vendas nos últimos 6 meses",
-      description: "Faturamento comprovado pelos afiliados"
+      value: "R$ 246.488,52",
+      label: "RevShare pago em um único mês",
+      description: "Comissão real comprovada no dashboard"
     },
     {
       icon: Users,
-      value: "+2.847",
-      label: "jogadores ativos conquistados",
-      description: "Base sólida de usuários engajados"
+      value: "1.867",
+      label: "players ativos gerando RevShare",
+      description: "Base sólida pagando comissões mensais"
     },
     {
       icon: TrendingUp,
-      value: "340%",
-      label: "aumento médio em conversões",
-      description: "Melhoria comprovada nos resultados"
+      value: "R$ 30.900",
+      label: "em CPA pago (618 conversões)",
+      description: "R$ 50 por lead convertido"
     },
     {
       icon: Target,
-      value: "95%",
-      label: "taxa de satisfação dos alunos",
-      description: "Metodologia aprovada e testada"
+      value: "25%",
+      label: "RevShare vitalício garantido",
+      description: "Para sempre, sem perder nunca"
     }
   ];
 
