@@ -19,10 +19,10 @@ const ProofSection = () => {
 
         {/* All Proof Screenshots Gallery */}
         <div className="max-w-7xl mx-auto">
-          {/* Top row - 3 smaller cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {/* Top row - 1 card centralizado */}
+          <div className="flex justify-center mb-12">
             {/* Dashboard Live */}
-            <div className="card-feature group">
+            <div className="card-feature group max-w-md">
               <div className="text-center mb-3">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <div className="bg-gradient-to-r from-success to-green-400 text-success-foreground px-2 py-1 rounded-md text-xs font-bold">
@@ -36,42 +36,6 @@ const ProofSection = () => {
                 <img 
                   src="/lovable-uploads/200ec8d4-361e-4f1e-b3d8-cebcbc2fc4c1.png" 
                   alt="Dashboard ao vivo mostrando ganhos reais" 
-                  className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-
-            {/* CPA Pendente */}
-            <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-gradient flex items-center justify-center gap-2">
-                  💰 CPA Pendente
-                </h3>
-                <p className="text-sm font-semibold text-success">R$ 18.972,17</p>
-                <p className="text-xs text-muted-foreground">Comissões aguardando</p>
-              </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
-                <img 
-                  src="/lovable-uploads/4091e940-7600-4883-bde6-b8c95665f313.png" 
-                  alt="CPA Pendente R$ 18.972,17" 
-                  className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </div>
-
-            {/* Revenue Share */}
-            <div className="card-feature group">
-              <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-accent-gradient flex items-center justify-center gap-2">
-                  🎯 Revenue Share
-                </h3>
-                <p className="text-sm font-semibold text-accent">R$ 23.432,98</p>
-                <p className="text-xs text-muted-foreground">Comissão recorrente</p>
-              </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/50 p-1">
-                <img 
-                  src="/lovable-uploads/cf853c6b-5650-4541-99ae-64d6e34e5cec.png" 
-                  alt="Revenue Share R$ 23.432,98" 
                   className="w-full h-auto object-contain rounded-md group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
