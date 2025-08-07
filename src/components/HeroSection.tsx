@@ -30,22 +30,15 @@ const HeroSection = () => {
 
                {/* VSL Space */}
                <div className="max-w-4xl mx-auto my-8">
-                 <div 
-                   className="relative aspect-video bg-gradient-to-br from-secondary/20 to-secondary/40 rounded-2xl border border-accent/20 overflow-hidden group cursor-pointer"
-                   onClick={() => window.open('https://youtu.be/VfUB4NFgm6M', '_blank')}
-                 >
-                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                   <div className="absolute inset-0 flex items-center justify-center">
-                     <div className="text-center space-y-4">
-                       <div className="w-20 h-20 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform cursor-pointer">
-                         <Play className="w-8 h-8 text-white ml-1" />
-                       </div>
-                       <div>
-                         <p className="text-lg font-semibold text-gradient">🎯 VSL Exclusiva</p>
-                         <p className="text-sm text-muted-foreground">Assista aos bastidores do método</p>
-                       </div>
-                     </div>
-                   </div>
+                 <div className="relative aspect-video bg-gradient-to-br from-secondary/20 to-secondary/40 rounded-2xl border border-accent/20 overflow-hidden">
+                   <iframe
+                     src="https://www.youtube.com/embed/VfUB4NFgm6M"
+                     title="VSL Exclusiva - Método Afiliado Lucrativo"
+                     frameBorder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                     allowFullScreen
+                     className="absolute inset-0 w-full h-full"
+                   ></iframe>
                  </div>
                </div>
                
