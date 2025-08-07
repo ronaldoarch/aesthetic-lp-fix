@@ -106,16 +106,16 @@ const ProofSection = () => {
               </div>
             </div>
 
-            {/* Sistema Logo - Nova imagem */}
+            {/* Print de Resultado */}
             <div className="card-feature group">
               <div className="text-center mb-3">
-                <h3 className="text-lg font-bold text-primary">🎯 Método</h3>
-                <p className="text-sm text-muted-foreground">Sistema Completo</p>
+                <h3 className="text-lg font-bold text-success">📊 Resultados</h3>
+                <p className="text-sm text-muted-foreground">Dashboard Financeiro</p>
               </div>
-              <div className="relative overflow-hidden rounded-lg bg-background/20 p-6 flex items-center justify-center min-h-[200px]">
+              <div className="relative overflow-hidden rounded-lg">
                 <img 
-                  src="/lovable-uploads/b770b69c-8d91-4b3c-a151-5358c12bcc02.png" 
-                  alt="Método Afiliado Lucrativo - Sistema Completo" 
+                  src="/lovable-uploads/afbc6555-af34-4a17-b541-a89c56780bdd.png" 
+                  alt="Dashboard com resultados financeiros reais" 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
