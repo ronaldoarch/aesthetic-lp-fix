@@ -17,92 +17,176 @@ const ProofSection = () => {
           </p>
         </div>
 
-        {/* Main dashboard with live badge */}
-        <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-16">
-          {/* Left side - Dashboard screenshot */}
-          <div className="lg:w-1/2">
-            <div className="relative">
-              <div className="absolute -top-2 -left-2 bg-gradient-to-r from-success to-green-400 text-success-foreground px-3 py-1 rounded-lg text-sm font-bold z-10">
-                Live
+        {/* All Proof Screenshots Gallery */}
+        <div className="max-w-7xl mx-auto">
+          {/* Main dashboard with live badge */}
+          <div className="text-center mb-12">
+            <div className="relative inline-block">
+              <div className="absolute -top-3 -left-3 bg-gradient-to-r from-success to-green-400 text-success-foreground px-4 py-2 rounded-lg text-sm font-bold z-10 shadow-lg">
+                🔴 LIVE
               </div>
               <div className="card-premium">
                 <img 
                   src="/lovable-uploads/200ec8d4-361e-4f1e-b3d8-cebcbc2fc4c1.png" 
-                  alt="Dashboard ao vivo mostrando R$ 56.838,82 em ganhos" 
-                  className="w-full h-auto object-cover rounded-lg"
+                  alt="Dashboard ao vivo mostrando ganhos reais" 
+                  className="w-full max-w-lg h-auto object-cover rounded-xl"
                 />
               </div>
             </div>
           </div>
 
-          {/* Right side - Stats cards */}
-          <div className="lg:w-1/2 space-y-4">
+          {/* Proof screenshots grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {/* CPA Pendente */}
+            <div className="card-feature group">
+              <div className="text-center mb-3">
+                <h3 className="text-lg font-bold text-gradient">💰 CPA Pendente</h3>
+                <p className="text-sm text-muted-foreground">R$ 18.972,17</p>
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/4091e940-7600-4883-bde6-b8c95665f313.png" 
+                  alt="CPA Pendente R$ 18.972,17" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Revenue Share */}
+            <div className="card-feature group">
+              <div className="text-center mb-3">
+                <h3 className="text-lg font-bold text-accent-gradient">🎯 Revenue Share</h3>
+                <p className="text-sm text-muted-foreground">R$ 23.432,98</p>
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/cf853c6b-5650-4541-99ae-64d6e34e5cec.png" 
+                  alt="Revenue Share R$ 23.432,98" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Dashboard Mobile */}
+            <div className="card-feature group">
+              <div className="text-center mb-3">
+                <h3 className="text-lg font-bold text-gradient">📱 Dashboard Mobile</h3>
+                <p className="text-sm text-muted-foreground">R$ 2.287.467,88</p>
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/b9132aa8-839b-45e0-ae89-e75f99443b23.png" 
+                  alt="Dashboard Mobile - Depósitos R$ 2.287.467,88" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Dashboard Extra 1 */}
+            <div className="card-feature group">
+              <div className="text-center mb-3">
+                <h3 className="text-lg font-bold text-warning">🚀 Gaming Platform</h3>
+                <p className="text-sm text-muted-foreground">Sistema Completo</p>
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" 
+                  alt="Gaming Platform Dashboard" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Logo do sistema */}
+            <div className="card-feature group">
+              <div className="text-center mb-3">
+                <h3 className="text-lg font-bold text-primary">🎯 Sistema</h3>
+                <p className="text-sm text-muted-foreground">Método Lucrativo</p>
+              </div>
+              <div className="relative overflow-hidden rounded-lg bg-background/50 p-4 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/f92f6d7a-33e2-40b8-9d69-0741dc7e20b5.png" 
+                  alt="Método Afiliado Lucrativo" 
+                  className="w-full max-w-[200px] h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+
+            {/* Comprovante adicional */}
+            <div className="card-feature group">
+              <div className="text-center mb-3">
+                <h3 className="text-lg font-bold text-success">✅ Comprovante</h3>
+                <p className="text-sm text-muted-foreground">Resultados Reais</p>
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img 
+                  src="/lovable-uploads/fcf6e3eb-897e-4077-a5a5-6d148cfbe5d6.png" 
+                  alt="Comprovante de resultados" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
+          {/* Summary stats section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Revenue Share Card */}
-            <div className="card-feature bg-gradient-to-r from-success/20 to-green-500/20 border-success/30">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-success rounded-lg flex items-center justify-center">
+            <div className="card-feature bg-gradient-to-r from-success/20 to-green-500/20 border-success/30 text-center">
+              <div className="p-4">
+                <div className="w-12 h-12 bg-success rounded-lg flex items-center justify-center mx-auto mb-3">
                   <DollarSign className="w-6 h-6 text-success-foreground" />
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-success">R$ 246.488,52</div>
-                  <div className="text-sm text-muted-foreground">RevShare pago em um único mês</div>
-                  <div className="text-xs text-success font-semibold">COMPROVADO</div>
-                </div>
+                <div className="text-2xl font-bold text-success mb-1">R$ 246K</div>
+                <div className="text-sm text-muted-foreground">RevShare Mensal</div>
+                <div className="text-xs text-success font-semibold mt-1">COMPROVADO</div>
               </div>
             </div>
 
             {/* Players Card */}
-            <div className="card-feature bg-gradient-to-r from-primary/20 to-blue-500/20 border-primary/30">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground text-lg">👥</span>
+            <div className="card-feature bg-gradient-to-r from-primary/20 to-blue-500/20 border-primary/30 text-center">
+              <div className="p-4">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-primary-foreground text-xl">👥</span>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-primary">1.867</div>
-                  <div className="text-sm text-muted-foreground">players ativos gerando RevShare</div>
-                  <div className="text-xs text-primary font-semibold">Base sólida pagando comissões mensais</div>
-                </div>
+                <div className="text-2xl font-bold text-primary mb-1">1.867</div>
+                <div className="text-sm text-muted-foreground">Players Ativos</div>
+                <div className="text-xs text-primary font-semibold mt-1">BASE SÓLIDA</div>
               </div>
             </div>
 
             {/* CPA Card */}
-            <div className="card-feature bg-gradient-to-r from-warning/20 to-yellow-500/20 border-warning/30">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-warning rounded-lg flex items-center justify-center">
+            <div className="card-feature bg-gradient-to-r from-warning/20 to-yellow-500/20 border-warning/30 text-center">
+              <div className="p-4">
+                <div className="w-12 h-12 bg-warning rounded-lg flex items-center justify-center mx-auto mb-3">
                   <TrendingUp className="w-6 h-6 text-warning-foreground" />
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-warning">R$ 30.900</div>
-                  <div className="text-sm text-muted-foreground">em CPA pago (618 conversões)</div>
-                  <div className="text-xs text-warning font-semibold">R$ 50 por lead convertido</div>
-                </div>
+                <div className="text-2xl font-bold text-warning mb-1">R$ 50</div>
+                <div className="text-sm text-muted-foreground">CPA Por Lead</div>
+                <div className="text-xs text-warning font-semibold mt-1">IMEDIATO</div>
               </div>
             </div>
 
             {/* RevShare Percentage Card */}
-            <div className="card-feature bg-gradient-to-r from-accent/20 to-purple-500/20 border-accent/30">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                  <span className="text-accent-foreground text-lg">⚡</span>
+            <div className="card-feature bg-gradient-to-r from-accent/20 to-purple-500/20 border-accent/30 text-center">
+              <div className="p-4">
+                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <span className="text-accent-foreground text-xl">⚡</span>
                 </div>
-                <div>
-                  <div className="text-2xl font-bold text-accent">25%</div>
-                  <div className="text-sm text-muted-foreground">RevShare vitalício garantido</div>
-                  <div className="text-xs text-accent font-semibold">Para sempre, sem perder nunca</div>
-                </div>
+                <div className="text-2xl font-bold text-accent mb-1">25%</div>
+                <div className="text-sm text-muted-foreground">RevShare</div>
+                <div className="text-xs text-accent font-semibold mt-1">VITALÍCIO</div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Bottom section with next results teaser */}
-        <div className="text-center">
-          <div className="card-premium bg-gradient-to-r from-background/95 to-secondary/95 backdrop-blur-sm max-w-2xl mx-auto">
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-gradient mb-2">Próximos Resultados: Os Seus</h3>
-              <p className="text-muted-foreground">
-                Junte-se aos afiliados que já transformaram seus negócios
-              </p>
+          {/* Bottom section with next results teaser */}
+          <div className="text-center">
+            <div className="card-premium bg-gradient-to-r from-background/95 to-secondary/95 backdrop-blur-sm max-w-2xl mx-auto">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gradient mb-2">🎯 Próximos Resultados: Os Seus</h3>
+                <p className="text-muted-foreground">
+                  Junte-se aos afiliados que já transformaram seus negócios
+                </p>
+              </div>
             </div>
           </div>
         </div>
