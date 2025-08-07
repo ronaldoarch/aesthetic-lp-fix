@@ -25,7 +25,7 @@ const HeroSection = () => {
                 <span className="text-gradient">AFILIADO</span>{" "}
                 <span className="text-accent-gradient">LUCRATIVO</span>
                 <br />
-                <span className="text-4xl lg:text-5xl">O SEGREDO DOS R$ 246K</span>
+                <span className="text-4xl lg:text-5xl">O SEGREDO DOS AFILIADOS</span>
                </h1>
 
                {/* VSL Space */}
@@ -80,6 +80,23 @@ const HeroSection = () => {
                 </Button>
               </div>
 
+              <div className="flex items-center gap-8 pt-4 justify-center">
+                <div className="text-center group cursor-pointer">
+                  <div className="text-3xl font-bold text-gradient group-hover:scale-110 transition-transform">💸 R$ 246K</div>
+                  <div className="text-sm text-muted-foreground">RevShare Mensal</div>
+                  <div className="text-xs text-accent animate-pulse">COMPROVADO</div>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-3xl font-bold text-accent-gradient group-hover:scale-110 transition-transform">🎯 R$ 50</div>
+                  <div className="text-sm text-muted-foreground">CPA Por Lead</div>
+                  <div className="text-xs text-warning animate-pulse">IMEDIATO</div>
+                </div>
+                <div className="text-center group cursor-pointer">
+                  <div className="text-3xl font-bold text-success group-hover:scale-110 transition-transform">⚡ 25%</div>
+                  <div className="text-sm text-muted-foreground">RevShare Vitalício</div>
+                  <div className="text-xs text-success animate-pulse">PARA SEMPRE</div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
