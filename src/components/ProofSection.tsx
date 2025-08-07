@@ -19,8 +19,8 @@ const ProofSection = () => {
 
         {/* All Proof Screenshots Gallery */}
         <div className="max-w-7xl mx-auto">
-          {/* Top row - Dashboard Ao Vivo e Plataforma Gaming */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+          {/* Top row - 3 cards principais */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Dashboard Live */}
             <div className="card-feature group">
               <div className="text-center mb-4">
@@ -58,11 +58,9 @@ const ProofSection = () => {
                 />
               </div>
             </div>
-          </div>
 
-          {/* Middle row - Dashboard Mobile centralizado */}
-          <div className="flex justify-center mb-12">
-            <div className="card-feature group max-w-md">
+            {/* Dashboard Mobile */}
+            <div className="card-feature group">
               <div className="text-center mb-4">
                 <h3 className="text-xl font-bold text-gradient flex items-center justify-center gap-2">
                   📱 Dashboard Mobile
