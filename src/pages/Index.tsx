@@ -4,8 +4,6 @@ import ResultsSection from "@/components/ResultsSection";
 import ProofSection from "@/components/ProofSection";
 import LaunchCaptureSection from "@/components/LaunchCaptureSection";
 import VipGroupSection from "@/components/VipGroupSection";
-import FloatingStats from "@/components/FloatingStats";
-import AnimatedBadges from "@/components/AnimatedBadges";
 
 const Index = () => {
   return (
@@ -16,10 +14,6 @@ const Index = () => {
       <ProofSection />
       <LaunchCaptureSection />
       <VipGroupSection />
-      
-      {/* Visual stimulation elements */}
-      <FloatingStats />
-      <AnimatedBadges />
     </main>
   );
 };
