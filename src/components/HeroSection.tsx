@@ -35,8 +35,8 @@ const HeroSection = () => {
                </p>
             </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
                   size="lg" 
                   className="btn-hero text-lg relative overflow-hidden group"
                   onClick={() => {
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 </Button>
               </div>
 
-              <div className="flex items-center gap-8 pt-4">
+              <div className="flex items-center gap-8 pt-4 justify-center">
                 <div className="text-center group cursor-pointer">
                   <div className="text-3xl font-bold text-gradient group-hover:scale-110 transition-transform">💸 R$ 246K</div>
                   <div className="text-sm text-muted-foreground">RevShare Mensal</div>
