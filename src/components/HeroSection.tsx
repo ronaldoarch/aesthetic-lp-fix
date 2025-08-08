@@ -31,11 +31,13 @@ const HeroSection = () => {
                {/* VSL Space */}
                <div className="max-w-4xl mx-auto my-8">
                  <div className="relative aspect-video bg-gradient-to-br from-secondary/20 to-secondary/40 rounded-2xl border border-accent/20 overflow-hidden">
-                   <video
-                     controls
-                     poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png"
-                     className="w-full h-full object-cover"
-                   >
+                    <video
+                      controls
+                      autoPlay
+                      muted
+                      poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png"
+                      className="w-full h-full object-cover"
+                    >
                      <source src="/videos/vsl-video.mp4" type="video/mp4" />
                      <p className="text-center p-8 text-muted-foreground">
                        Seu navegador não suporta vídeo. 
