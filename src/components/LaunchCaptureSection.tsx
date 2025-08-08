@@ -88,6 +88,7 @@ const LaunchCaptureSection = () => {
               <Button 
                 size="lg" 
                 className="w-full h-14 text-xl btn-hero animate-pulse-soft"
+                onClick={() => window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank')}
               >
                 🚀 ENTRAR NA LISTA VIP AGORA
               </Button>
