@@ -1,8 +1,40 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Clock, Users, Target, Zap } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+
+type FormData = {
+  whatsapp: string;
+  email: string;
+};
 
 const LaunchCaptureSection = () => {
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData>();
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      const { error } = await supabase
+        .from('vip_leads')
+        .insert([data]);
+
+      if (error) throw error;
+
+      toast.success("🎉 Dados salvos! Redirecionando para o WhatsApp...");
+      reset();
+      
+      // Aguarda um pouco para mostrar o toast antes de redirecionar
+      setTimeout(() => {
+        window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank');
+      }, 1000);
+    } catch (error) {
+      toast.error("❌ Erro ao salvar dados. Tente novamente.");
+      console.error('Erro ao salvar:', error);
+    }
+  };
+
   return (
     <section id="signup-section" className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
       {/* Background effects */}
@@ -71,26 +103,51 @@ const LaunchCaptureSection = () => {
               </p>
             </div>
 
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
-                <Input 
-                  type="text" 
-                  placeholder="📱 Seu WhatsApp (com DDD)"
-                  className="h-12 text-lg border-accent/20 focus:border-accent"
-                />
-                <Input 
-                  type="email" 
-                  placeholder="📧 Seu melhor email"
-                  className="h-12 text-lg border-accent/20 focus:border-accent"
-                />
+                <div>
+                  <Input 
+                    {...register("whatsapp", { 
+                      required: "WhatsApp é obrigatório",
+                      pattern: {
+                        value: /^\(\d{2}\)\s\d{4,5}-\d{4}$/,
+                        message: "Formato: (11) 99999-9999"
+                      }
+                    })}
+                    type="text" 
+                    placeholder="📱 Seu WhatsApp (com DDD)"
+                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`}
+                  />
+                  {errors.whatsapp && (
+                    <p className="text-xs text-destructive mt-1">{errors.whatsapp.message}</p>
+                  )}
+                </div>
+                <div>
+                  <Input 
+                    {...register("email", { 
+                      required: "Email é obrigatório",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Email inválido"
+                      }
+                    })}
+                    type="email" 
+                    placeholder="📧 Seu melhor email"
+                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`}
+                  />
+                  {errors.email && (
+                    <p className="text-xs text-destructive mt-1">{errors.email.message}</p>
+                  )}
+                </div>
               </div>
               
               <Button 
+                type="submit"
+                disabled={isSubmitting}
                 size="lg" 
-                className="w-full h-14 text-xl btn-hero animate-pulse-soft"
-                onClick={() => window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank')}
+                className="w-full h-14 text-xl btn-hero animate-pulse-soft disabled:opacity-50"
               >
-                🚀 ENTRAR NA LISTA VIP AGORA
+                {isSubmitting ? "⏳ SALVANDO..." : "🚀 ENTRAR NA LISTA VIP AGORA"}
               </Button>
               
               <p className="text-xs text-muted-foreground">
