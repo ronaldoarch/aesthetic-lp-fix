@@ -64,7 +64,7 @@ const HeroSection = () => {
                   }}
                 >
                   <span className="relative z-10">🔥 QUERO ENTRAR NA LISTA VIP</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-yellow-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
                 <Button 
                   variant="outline" 
