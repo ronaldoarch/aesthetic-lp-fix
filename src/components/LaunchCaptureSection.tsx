@@ -14,10 +14,11 @@ type FormData = {
 const LaunchCaptureSection = () => {
   const { register, watch, reset, formState: { errors } } = useForm<FormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const watchedFields = watch();
 
   const saveAndRedirect = async (data: FormData) => {
-    if (isSubmitting) return;
+    if (isSubmitting || hasSubmitted) return;
     
     setIsSubmitting(true);
     try {
@@ -27,6 +28,7 @@ const LaunchCaptureSection = () => {
 
       if (error) throw error;
 
+      setHasSubmitted(true);
       toast.success("🎉 Dados salvos! Redirecionando para o WhatsApp...");
       
       // Redireciona imediatamente
