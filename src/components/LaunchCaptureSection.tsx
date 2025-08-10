@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Clock, Users, Target, Zap } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
@@ -12,9 +12,14 @@ type FormData = {
 };
 
 const LaunchCaptureSection = () => {
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData>();
+  const { register, watch, reset, formState: { errors } } = useForm<FormData>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const watchedFields = watch();
 
-  const onSubmit = async (data: FormData) => {
+  const saveAndRedirect = async (data: FormData) => {
+    if (isSubmitting) return;
+    
+    setIsSubmitting(true);
     try {
       const { error } = await supabase
         .from('vip_leads')
@@ -23,17 +28,31 @@ const LaunchCaptureSection = () => {
       if (error) throw error;
 
       toast.success("🎉 Dados salvos! Redirecionando para o WhatsApp...");
-      reset();
       
-      // Aguarda um pouco para mostrar o toast antes de redirecionar
+      // Redireciona imediatamente
       setTimeout(() => {
         window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank');
-      }, 1000);
+      }, 500);
     } catch (error) {
       toast.error("❌ Erro ao salvar dados. Tente novamente.");
       console.error('Erro ao salvar:', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
+
+  // Auto-submit quando ambos os campos estão preenchidos e válidos
+  useEffect(() => {
+    const { whatsapp, email } = watchedFields;
+    
+    if (whatsapp && email && whatsapp.trim() && email.trim()) {
+      // Valida email
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      if (emailRegex.test(email)) {
+        saveAndRedirect({ whatsapp: whatsapp.trim(), email: email.trim() });
+      }
+    }
+  }, [watchedFields.whatsapp, watchedFields.email, isSubmitting]);
 
   return (
     <section id="signup-section" className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
@@ -103,7 +122,7 @@ const LaunchCaptureSection = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div className="space-y-4">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <Input 
@@ -149,7 +168,7 @@ const LaunchCaptureSection = () => {
               <p className="text-xs text-muted-foreground">
                 ✅ Seus dados estão 100% seguros. Jamais enviaremos spam.
               </p>
-            </form>
+            </div>
           </div>
 
           {/* Social proof */}
