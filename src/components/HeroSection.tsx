@@ -6,31 +6,33 @@ import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import dashboardMobile from "/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png";
-
 type FormData = {
   whatsapp: string;
   email: string;
 };
 const HeroSection = () => {
-  const { register, watch, reset, formState: { errors } } = useForm<FormData>();
+  const {
+    register,
+    watch,
+    reset,
+    formState: {
+      errors
+    }
+  } = useForm<FormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const watchedFields = watch();
-
   const saveAndRedirect = async (data: FormData) => {
     if (isSubmitting || hasSubmitted) return;
-    
     setIsSubmitting(true);
     try {
-      const { error } = await supabase
-        .from('vip_leads')
-        .insert([data]);
-
+      const {
+        error
+      } = await supabase.from('vip_leads').insert([data]);
       if (error) throw error;
-
       setHasSubmitted(true);
       toast.success("🎉 Dados salvos! Redirecionando para o WhatsApp...");
-      
+
       // Redireciona imediatamente
       setTimeout(() => {
         window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank');
@@ -45,17 +47,21 @@ const HeroSection = () => {
 
   // Auto-submit quando ambos os campos estão preenchidos e válidos
   useEffect(() => {
-    const { whatsapp, email } = watchedFields;
-    
+    const {
+      whatsapp,
+      email
+    } = watchedFields;
     if (whatsapp && email && whatsapp.trim() && email.trim()) {
       // Valida email
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
       if (emailRegex.test(email)) {
-        saveAndRedirect({ whatsapp: whatsapp.trim(), email: email.trim() });
+        saveAndRedirect({
+          whatsapp: whatsapp.trim(),
+          email: email.trim()
+        });
       }
     }
   }, [watchedFields.whatsapp, watchedFields.email, isSubmitting]);
-
   return <section id="signup-section" className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background/90" />
@@ -104,50 +110,28 @@ const HeroSection = () => {
 
              {/* Form Section */}
              <div className="max-w-md mx-auto">
-               <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-accent/20">
+               <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-accent/20 px-[70px]">
                  <div className="space-y-4">
                    <div>
-                     <Input 
-                       {...register("whatsapp", { 
-                         required: "WhatsApp é obrigatório"
-                       })}
-                       type="text" 
-                       placeholder="📱 Seu WhatsApp (com DDD)"
-                       className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`}
-                       disabled={isSubmitting || hasSubmitted}
-                     />
-                     {errors.whatsapp && (
-                       <p className="text-xs text-destructive mt-1">{errors.whatsapp.message}</p>
-                     )}
+                     <Input {...register("whatsapp", {
+                    required: "WhatsApp é obrigatório"
+                  })} type="text" placeholder="📱 Seu WhatsApp (com DDD)" className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`} disabled={isSubmitting || hasSubmitted} />
+                     {errors.whatsapp && <p className="text-xs text-destructive mt-1">{errors.whatsapp.message}</p>}
                    </div>
 
                    <div>
-                     <Input 
-                       {...register("email", { 
-                         required: "Email é obrigatório",
-                         pattern: {
-                           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                           message: "Email inválido"
-                         }
-                       })}
-                       type="email" 
-                       placeholder="📧 Seu melhor email"
-                       className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`}
-                       disabled={isSubmitting || hasSubmitted}
-                     />
-                     {errors.email && (
-                       <p className="text-xs text-destructive mt-1">{errors.email.message}</p>
-                     )}
+                     <Input {...register("email", {
+                    required: "Email é obrigatório",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Email inválido"
+                    }
+                  })} type="email" placeholder="📧 Seu melhor email" className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`} disabled={isSubmitting || hasSubmitted} />
+                     {errors.email && <p className="text-xs text-destructive mt-1">{errors.email.message}</p>}
                    </div>
 
-                   <Button 
-                     type="submit"
-                     disabled={isSubmitting || hasSubmitted}
-                     className="w-full btn-hero text-lg py-4"
-                   >
-                     {isSubmitting ? "⏳ Processando..." : 
-                      hasSubmitted ? "✅ Redirecionando..." : 
-                      "🔥 QUERO ENTRAR NA LISTA VIP"}
+                   <Button type="submit" disabled={isSubmitting || hasSubmitted} className="w-full btn-hero text-lg py-4">
+                     {isSubmitting ? "⏳ Processando..." : hasSubmitted ? "✅ Redirecionando..." : "🔥 QUERO ENTRAR NA LISTA VIP"}
                    </Button>
                  </div>
                  
