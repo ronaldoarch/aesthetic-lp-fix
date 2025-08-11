@@ -83,6 +83,46 @@ const VipGroupSection = () => {
     title: "Scripts que HIPNOTIZAM jogadores",
     description: "Copy testada que fez jogador depositar R$ 50K em 24h"
   }];
-  return;
+  return (
+    <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
+      <div className="container mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h2 className="text-4xl lg:text-5xl font-bold">
+                🎯 GRUPO VIP EXCLUSIVO
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Acesso limitado ao grupo de afiliados que faturam 7 dígitos
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 my-16">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-accent/20">
+                  <benefit.icon className="w-12 h-12 text-accent mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="max-w-md mx-auto">
+              <Button 
+                onClick={() => {
+                  document.getElementById('signup-section')?.scrollIntoView({ 
+                    behavior: 'smooth' 
+                  });
+                }}
+                className="w-full btn-hero text-lg py-4"
+              >
+                🔥 QUERO ENTRAR NO GRUPO VIP
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 export default VipGroupSection;
