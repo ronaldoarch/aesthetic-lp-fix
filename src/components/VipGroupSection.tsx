@@ -116,8 +116,17 @@ const VipGroupSection = () => {
                 <div className="flex items-start gap-3">
                   <span className="text-accent font-bold">🚀</span>
                   <span>Dominou tráfego pago com estratégias que <span className="text-primary font-bold">sobrevivem até o pior dos bloqueios</span>.</span>
-                </div>
-              </div>
+            </div>
+            
+            {/* Mentor Photo */}
+            <div className="flex justify-center pt-8">
+              <img 
+                src="/lovable-uploads/12e64321-2ff9-4d22-925e-812aefb6e0df.png" 
+                alt="Marcilon - O Rei do Nicho Black segurando prêmio"
+                className="max-w-md w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
               
               <p className="text-xl font-semibold text-primary">
                 🔥 Agora ele abriu o jogo. Sem filtro, sem enrolação, sem depender de ninguém.
