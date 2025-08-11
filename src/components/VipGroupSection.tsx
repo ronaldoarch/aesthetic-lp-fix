@@ -83,6 +83,55 @@ const VipGroupSection = () => {
     title: "Scripts que HIPNOTIZAM jogadores",
     description: "Copy testada que fez jogador depositar R$ 50K em 24h"
   }];
-  return;
+  return (
+    <section className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Benefits */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-card/50 backdrop-blur-sm p-6 rounded-xl border border-accent/20">
+                <benefit.icon className="w-12 h-12 text-accent mx-auto mb-4" />
+                <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
+                <p className="text-muted-foreground text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Button only */}
+          <div className="max-w-2xl mx-auto">
+            <Button 
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }} 
+              size="lg" 
+              className="w-full bg-green-700 hover:bg-green-800 text-white text-lg py-4"
+            >
+              🔥 QUERO ENTRAR NA LISTA VIP
+            </Button>
+          </div>
+
+          {/* Social proof */}
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 opacity-80">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-gradient">1.847</div>
+              <div className="text-sm text-muted-foreground">Pessoas já na lista</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-accent-gradient">R$ 56M</div>
+              <div className="text-sm text-muted-foreground">Faturamento dos alunos</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-success">98%</div>
+              <div className="text-sm text-muted-foreground">Taxa de satisfação</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 export default VipGroupSection;
