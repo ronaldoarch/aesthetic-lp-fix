@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import dashboardMobile from "/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+  return <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background/90" />
       
@@ -31,13 +29,7 @@ const HeroSection = () => {
                {/* VSL Space */}
                <div className="max-w-4xl mx-auto my-8">
                  <div className="relative aspect-video bg-gradient-to-br from-secondary/20 to-secondary/40 rounded-2xl border border-accent/20 overflow-hidden">
-                    <video
-                      controls
-                      autoPlay
-                      muted
-                      poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png"
-                      className="w-full h-full object-cover"
-                    >
+                    <video controls autoPlay muted poster="/lovable-uploads/64bc738d-9617-4abf-ae09-8a93959ef6b6.png" className="w-full h-full object-cover">
                      <source src="/videos/vsl-video.mp4" type="video/mp4" />
                      <p className="text-center p-8 text-muted-foreground">
                        Seu navegador não suporta vídeo. 
@@ -57,29 +49,16 @@ const HeroSection = () => {
             </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg" 
-                  className="btn-hero text-lg relative overflow-hidden group"
-                  onClick={() => {
-                    const signupSection = document.getElementById('signup-section');
-                    signupSection?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
+                <Button size="lg" className="btn-hero text-lg relative overflow-hidden group" onClick={() => {
+              const signupSection = document.getElementById('signup-section');
+              signupSection?.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }}>
                   <span className="relative z-10">🔥 QUERO ENTRAR NA LISTA VIP</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="group border-accent/30 hover:border-accent/60"
-                  onClick={() => {
-                    const proofSection = document.getElementById('proof-section');
-                    proofSection?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform text-accent" />
-                  💰 VER RESULTADOS REAIS
-                </Button>
+                
               </div>
 
           </div>
@@ -88,8 +67,6 @@ const HeroSection = () => {
 
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
