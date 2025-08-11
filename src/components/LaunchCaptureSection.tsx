@@ -113,20 +113,64 @@ const LaunchCaptureSection = () => {
             </div>
           </div>
 
-          {/* Button to scroll to top */}
-          <div className="max-w-2xl mx-auto">
-            <Button 
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth'
-                });
-              }}
-              size="lg" 
-              className="w-full h-14 text-xl btn-hero animate-pulse-soft"
-            >
-              🚀 QUERO ENTRAR NA LISTA VIP
-            </Button>
+          {/* Formulário de captura */}
+          <div className="card-premium max-w-2xl mx-auto">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-gradient mb-2">
+                🔥 GARANTIR MINHA VAGA VIP
+              </h3>
+              <p className="text-muted-foreground">
+                Insira seu melhor email e WhatsApp para receber acesso prioritário
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Input 
+                    {...register("whatsapp", { 
+                      required: "WhatsApp é obrigatório"
+                    })}
+                    type="text" 
+                    placeholder="📱 Seu WhatsApp (com DDD)"
+                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`}
+                  />
+                  {errors.whatsapp && (
+                    <p className="text-xs text-destructive mt-1">{errors.whatsapp.message}</p>
+                  )}
+                </div>
+                <div>
+                  <Input 
+                    {...register("email", { 
+                      required: "Email é obrigatório",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Email inválido"
+                      }
+                    })}
+                    type="email" 
+                    placeholder="📧 Seu melhor email"
+                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`}
+                  />
+                  {errors.email && (
+                    <p className="text-xs text-destructive mt-1">{errors.email.message}</p>
+                  )}
+                </div>
+              </div>
+              
+              <Button 
+                type="submit"
+                disabled={isSubmitting}
+                size="lg" 
+                className="w-full h-14 text-xl btn-hero animate-pulse-soft disabled:opacity-50"
+              >
+                {isSubmitting ? "⏳ SALVANDO..." : "🚀 ENTRAR NA LISTA VIP AGORA"}
+              </Button>
+              
+              <p className="text-xs text-muted-foreground">
+                ✅ Seus dados estão 100% seguros. Jamais enviaremos spam.
+              </p>
+            </div>
           </div>
 
           {/* Social proof */}

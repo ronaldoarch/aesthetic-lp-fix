@@ -25,7 +25,7 @@ const VipGroupSection = () => {
   }];
 
   return (
-    <section id="signup-section" className="py-20 bg-gradient-to-br from-background to-secondary/20">
+    <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Header */}
@@ -34,39 +34,15 @@ const VipGroupSection = () => {
               <Gift className="h-16 w-16 text-accent" />
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold">
-              🎯 GARANTIR MINHA VAGA VIP
+              🎯 GRUPO VIP EXCLUSIVO
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Insira seu melhor email e WhatsApp para receber acesso prioritário
+              Entre para o grupo mais seleto de afiliados milionários do Brasil
             </p>
           </div>
 
-          {/* Form */}
-          <div className="max-w-md mx-auto space-y-4">
-            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-accent/20">
-              <div className="space-y-4">
-                <input
-                  type="tel"
-                  placeholder="📱 Seu WhatsApp (com DDD)"
-                  className="w-full p-4 bg-background border border-accent/30 rounded-lg text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="📧 Seu melhor email"
-                  className="w-full p-4 bg-background border border-accent/30 rounded-lg text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none"
-                />
-                <Button className="w-full btn-hero text-lg py-4">
-                  🚀 ENTRAR NA LISTA VIP AGORA
-                </Button>
-              </div>
-              <p className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2">
-                ✅ Seus dados estão 100% seguros. Jamais enviaremos spam.
-              </p>
-            </div>
-          </div>
-
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
@@ -79,6 +55,22 @@ const VipGroupSection = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* CTA Button */}
+          <div className="pt-8">
+            <Button 
+              size="lg" 
+              className="btn-hero text-lg px-8 py-4" 
+              onClick={() => {
+                const signupSection = document.getElementById('signup-section');
+                signupSection?.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              🚀 QUERO ENTRAR NA LISTA VIP
+            </Button>
           </div>
         </div>
       </div>
