@@ -1,7 +1,61 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Gift, Users, BookOpen, Zap, MessageCircle, TrendingUp } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import relatoriGanhos from "/lovable-uploads/200ec8d4-361e-4f1e-b3d8-cebcbc2fc4c1.png";
+
+type FormData = {
+  whatsapp: string;
+  email: string;
+};
 const VipGroupSection = () => {
+  const { register, watch, reset, formState: { errors } } = useForm<FormData>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const watchedFields = watch();
+
+  const saveAndRedirect = async (data: FormData) => {
+    if (isSubmitting || hasSubmitted) return;
+    
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase
+        .from('vip_leads')
+        .insert([data]);
+
+      if (error) throw error;
+
+      setHasSubmitted(true);
+      toast.success("🎉 Dados salvos! Redirecionando para o WhatsApp...");
+      
+      // Redireciona imediatamente
+      setTimeout(() => {
+        window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank');
+      }, 500);
+    } catch (error) {
+      toast.error("❌ Erro ao salvar dados. Tente novamente.");
+      console.error('Erro ao salvar:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Auto-submit quando ambos os campos estão preenchidos e válidos
+  useEffect(() => {
+    const { whatsapp, email } = watchedFields;
+    
+    if (whatsapp && email && whatsapp.trim() && email.trim()) {
+      // Valida email
+      const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+      if (emailRegex.test(email)) {
+        saveAndRedirect({ whatsapp: whatsapp.trim(), email: email.trim() });
+      }
+    }
+  }, [watchedFields.whatsapp, watchedFields.email, isSubmitting]);
+
   const benefits = [{
     icon: BookOpen,
     title: "Programa de RevShare SECRETO",
@@ -25,7 +79,7 @@ const VipGroupSection = () => {
   }];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
+    <section id="signup-section" className="py-20 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Header */}
@@ -34,15 +88,71 @@ const VipGroupSection = () => {
               <Gift className="h-16 w-16 text-accent" />
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold">
-              🎯 GRUPO VIP EXCLUSIVO
+              🚨 VAGAS LIMITADAS
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Entre para o grupo mais seleto de afiliados milionários do Brasil
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Apenas <span className="text-accent font-bold">100 pessoas</span> terão acesso ao método que gera{" "}
+              <span className="text-primary font-bold">R$ 246.488,52 por mês</span> em comissões.
             </p>
           </div>
 
+          {/* Form */}
+          <div className="max-w-md mx-auto">
+            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-accent/20">
+              <div className="space-y-4">
+                <div>
+                  <Input 
+                    {...register("whatsapp", { 
+                      required: "WhatsApp é obrigatório"
+                    })}
+                    type="text" 
+                    placeholder="📱 Seu WhatsApp (com DDD)"
+                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`}
+                    disabled={isSubmitting || hasSubmitted}
+                  />
+                  {errors.whatsapp && (
+                    <p className="text-xs text-destructive mt-1">{errors.whatsapp.message}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Input 
+                    {...register("email", { 
+                      required: "Email é obrigatório",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Email inválido"
+                      }
+                    })}
+                    type="email" 
+                    placeholder="📧 Seu melhor email"
+                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`}
+                    disabled={isSubmitting || hasSubmitted}
+                  />
+                  {errors.email && (
+                    <p className="text-xs text-destructive mt-1">{errors.email.message}</p>
+                  )}
+                </div>
+
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting || hasSubmitted}
+                  className="w-full btn-hero text-lg py-4"
+                >
+                  {isSubmitting ? "⏳ Processando..." : 
+                   hasSubmitted ? "✅ Redirecionando..." : 
+                   "🔥 QUERO ENTRAR NA LISTA VIP"}
+                </Button>
+              </div>
+              
+              <p className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2">
+                ✅ Seus dados estão 100% seguros. Jamais enviaremos spam.
+              </p>
+            </div>
+          </div>
+
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
@@ -55,22 +165,6 @@ const VipGroupSection = () => {
                 </div>
               );
             })}
-          </div>
-
-          {/* CTA Button */}
-          <div className="pt-8">
-            <Button 
-              size="lg" 
-              className="btn-hero text-lg px-8 py-4" 
-              onClick={() => {
-                const signupSection = document.getElementById('signup-section');
-                signupSection?.scrollIntoView({
-                  behavior: 'smooth'
-                });
-              }}
-            >
-              🚀 QUERO ENTRAR NA LISTA VIP
-            </Button>
           </div>
         </div>
       </div>
