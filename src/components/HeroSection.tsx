@@ -83,7 +83,7 @@ const HeroSection = () => {
                 <span className="text-gradient">AFILIADO</span>{" "}
                 <span className="text-accent-gradient">LUCRATIVO</span>
                 <br />
-                <span className="text-4xl lg:text-5xl">O SEGREDO DOS AFILIADO</span>
+                <span className="text-4xl lg:text-5xl">AULA GRATUITA 25/08</span>
                </h1>
 
                {/* VSL Space */}
@@ -115,19 +115,19 @@ const HeroSection = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Input {...register("whatsapp", {
-                       required: "WhatsApp é obrigatório"
-                     })} type="text" placeholder="📱 Seu WhatsApp (com DDD)" className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`} disabled={isSubmitting || hasSubmitted} />
+                      required: "WhatsApp é obrigatório"
+                    })} type="text" placeholder="📱 Seu WhatsApp (com DDD)" className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`} disabled={isSubmitting || hasSubmitted} />
                         {errors.whatsapp && <p className="text-xs text-destructive mt-1">{errors.whatsapp.message}</p>}
                       </div>
 
                       <div>
                         <Input {...register("email", {
-                       required: "Email é obrigatório",
-                       pattern: {
-                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                         message: "Email inválido"
-                       }
-                     })} type="email" placeholder="📧 Seu melhor email" className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`} disabled={isSubmitting || hasSubmitted} />
+                      required: "Email é obrigatório",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Email inválido"
+                      }
+                    })} type="email" placeholder="📧 Seu melhor email" className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`} disabled={isSubmitting || hasSubmitted} />
                         {errors.email && <p className="text-xs text-destructive mt-1">{errors.email.message}</p>}
                       </div>
                     </div>
