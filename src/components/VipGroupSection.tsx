@@ -83,6 +83,65 @@ const VipGroupSection = () => {
     title: "Scripts que HIPNOTIZAM jogadores",
     description: "Copy testada que fez jogador depositar R$ 50K em 24h"
   }];
-  return;
+  return (
+    <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
+          {/* Mentor Section */}
+          <div className="space-y-6">
+            <h2 className="text-4xl lg:text-5xl font-bold">
+              👑 <span className="text-gradient">Quem é o Mentor</span> por Trás do Método
+            </h2>
+            <h3 className="text-2xl lg:text-3xl font-bold text-accent">
+              Marcilon — O Rei do Nicho Black
+            </h3>
+            
+            <div className="space-y-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p>
+                Criador do maior canal de marketing voltado a apostas e afiliados da América Latina, 
+                Marcilon é o nome por trás das operações mais lucrativas do underground digital.
+              </p>
+              
+              <p>Com mais de 6 anos de atuação no mundo das apostas, Marcilon já:</p>
+              
+              <div className="grid gap-4 text-left bg-secondary/10 p-6 rounded-lg border border-accent/20">
+                <div className="flex items-start gap-3">
+                  <span className="text-accent font-bold">💰</span>
+                  <span>Gerou mais de <span className="text-accent font-bold">R$100 milhões</span> em faturamento para casas de apostas e afiliados.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-accent font-bold">🎯</span>
+                  <span>Transformou afiliados comuns em verdadeiras <span className="text-primary font-bold">máquinas de depósito diário</span>.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-accent font-bold">🚀</span>
+                  <span>Dominou tráfego pago com estratégias que <span className="text-primary font-bold">sobrevivem até o pior dos bloqueios</span>.</span>
+                </div>
+              </div>
+              
+              <p className="text-xl font-semibold text-primary">
+                🔥 Agora ele abriu o jogo. Sem filtro, sem enrolação, sem depender de ninguém.
+              </p>
+              
+              <p className="text-lg">
+                Esse é o método criado por quem já viu o jogo por dentro — e decidiu colocar os afiliados no topo da mesa.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="pt-8">
+            <Button 
+              onClick={() => window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank')}
+              size="lg" 
+              className="bg-green-700 hover:bg-green-800 text-white text-xl py-6 px-8"
+            >
+              🔥 QUERO ENTRAR NA LISTA VIP AGORA
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 export default VipGroupSection;
