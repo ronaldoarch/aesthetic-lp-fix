@@ -83,8 +83,6 @@ const VipGroupSection = () => {
     title: "Scripts que HIPNOTIZAM jogadores",
     description: "Copy testada que fez jogador depositar R$ 50K em 24h"
   }];
-  return <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
-      
-    </section>;
+  return;
 };
 export default VipGroupSection;
