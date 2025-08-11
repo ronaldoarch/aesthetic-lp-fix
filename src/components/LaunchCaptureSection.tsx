@@ -5,32 +5,33 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-
 type FormData = {
   whatsapp: string;
   email: string;
 };
-
 const LaunchCaptureSection = () => {
-  const { register, watch, reset, formState: { errors } } = useForm<FormData>();
+  const {
+    register,
+    watch,
+    reset,
+    formState: {
+      errors
+    }
+  } = useForm<FormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const watchedFields = watch();
-
   const saveAndRedirect = async (data: FormData) => {
     if (isSubmitting || hasSubmitted) return;
-    
     setIsSubmitting(true);
     try {
-      const { error } = await supabase
-        .from('vip_leads')
-        .insert([data]);
-
+      const {
+        error
+      } = await supabase.from('vip_leads').insert([data]);
       if (error) throw error;
-
       setHasSubmitted(true);
       toast.success("🎉 Dados salvos! Redirecionando para o WhatsApp...");
-      
+
       // Redireciona imediatamente
       setTimeout(() => {
         window.open('https://chat.whatsapp.com/Bv9jc95MJTR33RAirOzj4Q', '_blank');
@@ -45,19 +46,22 @@ const LaunchCaptureSection = () => {
 
   // Auto-submit quando ambos os campos estão preenchidos e válidos
   useEffect(() => {
-    const { whatsapp, email } = watchedFields;
-    
+    const {
+      whatsapp,
+      email
+    } = watchedFields;
     if (whatsapp && email && whatsapp.trim() && email.trim()) {
       // Valida email
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
       if (emailRegex.test(email)) {
-        saveAndRedirect({ whatsapp: whatsapp.trim(), email: email.trim() });
+        saveAndRedirect({
+          whatsapp: whatsapp.trim(),
+          email: email.trim()
+        });
       }
     }
   }, [watchedFields.whatsapp, watchedFields.email, isSubmitting]);
-
-  return (
-    <section id="signup-section" className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
+  return <section id="signup-section" className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5" />
       
@@ -115,16 +119,12 @@ const LaunchCaptureSection = () => {
 
           {/* Button to redirect to top */}
           <div className="max-w-2xl mx-auto">
-            <Button 
-              onClick={() => {
-                window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth'
-                });
-              }}
-              size="lg" 
-              className="w-full h-14 text-xl btn-hero animate-pulse-soft"
-            >
+            <Button onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }} size="lg" className="w-full bg-green-700 hover:bg-green-800 text-white text-lg py-4">
               🔥 QUERO ENTRAR NA LISTA VIP
             </Button>
           </div>
@@ -146,8 +146,6 @@ const LaunchCaptureSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LaunchCaptureSection;
