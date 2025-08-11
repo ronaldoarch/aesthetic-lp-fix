@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <span className="text-gradient">AFILIADO</span>{" "}
                 <span className="text-accent-gradient">LUCRATIVO</span>
                 <br />
-                <span className="text-4xl lg:text-5xl">O SEGREDO DOS AFILIADO</span>
+                <span className="text-4xl lg:text-5xl">O SEGREDO DOS AFILIADOS</span>
                </h1>
 
                {/* VSL Space */}
