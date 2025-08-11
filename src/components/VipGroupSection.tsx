@@ -79,7 +79,7 @@ const VipGroupSection = () => {
   }];
 
   return (
-    <section id="signup-section" className="py-20 bg-gradient-to-br from-background to-secondary/20">
+    <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           {/* Header */}
@@ -96,59 +96,20 @@ const VipGroupSection = () => {
             </p>
           </div>
 
-          {/* Form */}
-          <div className="max-w-md mx-auto">
-            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-accent/20">
-              <div className="space-y-4">
-                <div>
-                  <Input 
-                    {...register("whatsapp", { 
-                      required: "WhatsApp é obrigatório"
-                    })}
-                    type="text" 
-                    placeholder="📱 Seu WhatsApp (com DDD)"
-                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.whatsapp ? 'border-destructive' : ''}`}
-                    disabled={isSubmitting || hasSubmitted}
-                  />
-                  {errors.whatsapp && (
-                    <p className="text-xs text-destructive mt-1">{errors.whatsapp.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Input 
-                    {...register("email", { 
-                      required: "Email é obrigatório",
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "Email inválido"
-                      }
-                    })}
-                    type="email" 
-                    placeholder="📧 Seu melhor email"
-                    className={`h-12 text-lg border-accent/20 focus:border-accent ${errors.email ? 'border-destructive' : ''}`}
-                    disabled={isSubmitting || hasSubmitted}
-                  />
-                  {errors.email && (
-                    <p className="text-xs text-destructive mt-1">{errors.email.message}</p>
-                  )}
-                </div>
-
-                <Button 
-                  type="submit"
-                  disabled={isSubmitting || hasSubmitted}
-                  className="w-full btn-hero text-lg py-4"
-                >
-                  {isSubmitting ? "⏳ Processando..." : 
-                   hasSubmitted ? "✅ Redirecionando..." : 
-                   "🔥 QUERO ENTRAR NA LISTA VIP"}
-                </Button>
-              </div>
-              
-              <p className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2">
-                ✅ Seus dados estão 100% seguros. Jamais enviaremos spam.
-              </p>
-            </div>
+          {/* CTA Button */}
+          <div className="pt-8">
+            <Button 
+              size="lg" 
+              className="btn-hero text-lg px-8 py-4" 
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              }}
+            >
+              🚀 QUERO ENTRAR NA LISTA VIP
+            </Button>
           </div>
 
           {/* Benefits */}
