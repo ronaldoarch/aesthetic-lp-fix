@@ -68,53 +68,19 @@ const LaunchCaptureSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Countdown urgency */}
-          <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/40 rounded-full px-6 py-3 mb-8">
-            <Clock className="w-5 h-5 text-destructive animate-pulse" />
-            <span className="text-destructive font-bold">⏰ LANÇAMENTO EM 48H</span>
-          </div>
+          
 
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            🚨 LISTA VIP <span className="text-gradient">FECHANDO</span>
-            <br />
-            <span className="text-accent-gradient">ÚLTIMAS 23 VAGAS</span>
-          </h2>
+          
 
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Seja um dos primeiros a ter acesso ao <span className="text-accent font-bold">MÉTODO AFILIADO LUCRATIVO</span> que já gerou 
-            <span className="text-primary font-bold"> R$ 246.488,52</span> em apenas um mês
-          </p>
+          
 
           {/* Benefícios exclusivos */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="card-feature group cursor-pointer">
-              <div className="flex flex-col items-center text-center">
-                <div className="p-4 bg-gradient-primary rounded-full mb-4 group-hover:scale-110 transition-transform">
-                  <Target className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">🎯 Acesso por um ano</h3>
-                <p className="text-muted-foreground text-sm">Método completo + atualizações para sempre</p>
-              </div>
-            </div>
+            
 
-            <div className="card-feature group cursor-pointer">
-              <div className="flex flex-col items-center text-center">
-                <div className="p-4 bg-gradient-accent rounded-full mb-4 group-hover:scale-110 transition-transform">
-                  <Users className="w-8 h-8 text-accent-foreground" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">👥 Grupo VIP</h3>
-                <p className="text-muted-foreground text-sm">Telegram exclusivo com mentoria diária</p>
-              </div>
-            </div>
+            
 
-            <div className="card-feature group cursor-pointer">
-              <div className="flex flex-col items-center text-center">
-                <div className="p-4 bg-gradient-primary rounded-full mb-4 group-hover:scale-110 transition-transform">
-                  <Zap className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">⚡ Resultados em 7 dias</h3>
-                <p className="text-muted-foreground text-sm">Primeiros CPA na primeira semana</p>
-              </div>
-            </div>
+            
           </div>
 
           {/* Button to redirect to top */}
